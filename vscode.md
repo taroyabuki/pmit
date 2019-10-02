@@ -5,10 +5,11 @@
 * Windowsでは，Chocolateyで入れるのが簡単。
 * Windows以外、またはChocolateyを使いたくない場合は自分で調べて入れる。VS Code自体は，https://code.visualstudio.com/ からインストーラをダウンロードしてインストールできる。JREとGitも自分で入れること。
 
-Chocolateyで入れる方法は次のとおり。（参考：[Installing Chocolatey](https://chocolatey.org/install)）
+Chocolateyで入れる方法は次のとおり。（参考：）
 
 1. スタートボタンを右クリックして，Windows Powershell（管理者）をクリックする。
 1. 「`Set-ExecutionPolicy AllSigned`」と入力して，エンター。プロンプトには`Y`，エンター。
+1. [Installing Chocolatey](https://chocolatey.org/install)の「Now run the following command:」に書かれているコマンドをコピー＆ペーストしてエンター。
 1. 「`cinst javaruntime vscode git -y`」と入力して，エンター。（javaruntimeは後述のW3C Validatorのため）
 
 ## 拡張機能
