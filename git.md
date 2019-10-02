@@ -1,5 +1,7 @@
 # VS CodeでGitHubを使う
 
+前提：[Git](https://git-scm.com/downloads)がインストールされている。
+
 ## 初期設定
 
 `Ctrl+@`でターミナルを開き，以下を実行する。

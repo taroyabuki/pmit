@@ -5,10 +5,10 @@
 次のソフトウェアをインストールする。
 
 * [VS Code](https://code.visualstudio.com/)
-* [Java Runtime Environment](https://java.com/ja/download/)
+* [Java Runtime Environment](https://java.com/ja/download/manual.jsp)
 * [Git](https://git-scm.com/downloads)
 
-Windowsでは，Chocolateyでまとめてインストールするのが簡単（アクセス数に制限があるため，教室で大人数が一斉にインストールするのは難しい）。上のリンク先から一つずつダウンロード・インストールしてもよい。
+Windowsでは，Chocolateyでまとめてインストールするのが簡単（アクセス数に制限があるため，教室で大人数が一斉にインストールするのは難しい）。上のリンク先から一つずつダウンロード・インストールしてもよい（Javaは64ビット版をインストールし，インストール後に一度サインアウトする）。
 
 Chocolateyを使う場合は，[Installing Chocolatey](https://chocolatey.org/install)の手順に従う。
 概要は次のとおり。
@@ -31,7 +31,7 @@ cinst javaruntime vscode git -y
 名前|キーワード|メモ（使用する講義等）
 ---|---|---
 hexdump for VSCode|`hexdump`|講義「情報リテラシ」
-W3C Validation|`w3c validator`|講義「情報リテラシ」，PM実験，PM演習
+W3C Validation|`w3c validator`|講義「情報リテラシ」，PM実験，PM演習。Windows Security Alertが出たら，アクセスを許可する。
 Japanese Language Pack for Visual Studio Code|`japanese`|日本語UIが不要なら入れなくてもよい。
 
 ## VS Codeのその他の設定
