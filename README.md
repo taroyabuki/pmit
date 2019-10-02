@@ -1,5 +1,3 @@
-# PM学科のためのメモ
-
 文書|メモ（使用講義等）
 ---|---
 [Visual Studio Codeの導入](vscode.md)|講義「情報リテラシ」・PM実験・PM演習
