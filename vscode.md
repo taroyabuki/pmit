@@ -40,3 +40,5 @@ Japanese Language Pack for Visual Studio Code|`japanese`|日本語UIが不要な
 - 全角空白を見やすくするために，フォントRicty Diminishedを導入する。
     - [フォントファイル](https://github.com/edihbrandon/RictyDiminished/raw/master/RictyDiminished-Regular.ttf)をダウンロードし，ダブルクリックで開き，「インストール」をクリックする。
     - VS Codeを再起動し，`Ctrl+,(Comma)`で設定タブを開き，検索欄に`font`と入力，Editor: Font Familyを「`Ricty Diminished`」にする。
+
+VS Codeとは関係ないが，このあたりで，ファイルの拡張子が表示されるようにしておくこと。
