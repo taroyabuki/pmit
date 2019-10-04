@@ -55,7 +55,8 @@ body {
 
 **最終成果物のHTMLとCSSに文法エラーがあってはいけない！**
 
-VS CodeでHTMLとCSSのエラーに赤い波線が引かれるようにして，常にエラーがない状態を保つようにするとよい。参考：https://haniwaman.com/vdcode-w3c/
+VS Codeに拡張機能W3C Validationを入れておくと，エラーの部分に赤い波線が引かれるようになる。
+それを無視しないように。
 
 Shift+Alt+fでHTMLを整形する機能も便利である。
 
