@@ -60,19 +60,25 @@ VS Codeに拡張機能W3C Validationを入れておくと，エラーの部分�
 
 Shift+Alt+fでHTMLを整形する機能も便利である。
 
-よくある間違い1：要素が入れ子になっていない。
+**次のようなHTMLをVS Codeで作成し，エラーが検出されることを確認，エラーを修正せよ。**
 
 ```html
-<div><a href="foo.html">こちら</div></a>
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <meta charset='utf-8' />
+  <link rel='stylesheet' href='style.css' />
+  <title>テンプレ</title>
+</head>
+<body>
+  <h1><<Rock & Roll>></h1>
+  <font size="+2">こんにちは</font>
+  <div><a href="foo.html">こちら</div></a>へ
+</body>
+</html>
 ```
 
-修正：タグを入れ子にする。
-
-```html
-<div><a href="foo.html">こちら</a></div>
-```
-
-よくある間違い2：「<」，「>」，「&」をそのまま使っている。（タグだと解釈されてしまう。）
+間違い1：「<」，「>」，「&」をそのまま使っている。（タグだと解釈されてしまう。）
 
 ```html
 <<Rock & Roll>>
@@ -84,13 +90,13 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 &lt;&lt;Rock &ampl Roll&gt;&gt;
 ```
 
-よくある間違い3：使えないはずの（古い）要素を使っている。
+間違い2：使えないはずの（古い）要素を使っている。
 
 ```html
 <font size="+2">こんにちは</font>
 ```
 
-修正：古い参考書は書庫にしまい，古い要素の代わりになるCSSプロパティを使う。
+修正：古い参考書は書庫にしまい，古い要素の代わりになるCSSプロパティをstyle.cssに記述する。
 
 ```html
 <span class="bar">こんにちは</bar>
@@ -100,6 +106,18 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 .bar {
   font-size: x-large;
 }
+```
+
+間違い3：要素が入れ子になっていない。
+
+```html
+<div><a href="foo.html">こちら</div></a>
+```
+
+修正：タグを入れ子にする。
+
+```html
+<div><a href="foo.html">こちら</a></div>
 ```
 
 ## ウェブページの公開
