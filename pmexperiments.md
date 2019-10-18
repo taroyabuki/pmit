@@ -124,7 +124,7 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 
 ### 準備
 
-メンバ全員のGitHubアカウントをPMがまとめて矢吹（taro.yabuki at it-chiba.ac.jp）に報告する。報告の形式は以下の通り。（1行に1件，半角カンマ区切り）
+メンバ全員のGitHubアカウントをPMがまとめて矢吹（taro.yabuki+github@it-chiba.ac.jp）に報告する。報告の形式は以下の通り。（1行に1件，半角カンマ区切り）
 
 ```
 研究室・グループ名
