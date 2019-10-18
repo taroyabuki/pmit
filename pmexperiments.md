@@ -168,17 +168,17 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 
 班|URL|エラーチェック
 -|-|-
-下田A|http://shimodaa.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fshimodaa.pm-chiba.tech%2F)
-下田B|http://shimodab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fshimodab.pm-chiba.tech%2F)
-下田C|http://shimodac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fshimodac.pm-chiba.tech%2F)
-小笠原A|http://ogasawaraa.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fogasawaraa.pm-chiba.tech%2F)
-小笠原B|http://ogasawarab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fogasawarab.pm-chiba.tech%2F)
-小笠原C|http://ogasawarac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fogasawarac.pm-chiba.tech%2F)
-矢吹A|http://yabukia.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fyabukia.pm-chiba.tech%2F)
-矢吹B|http://yabukib.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fyabukib.pm-chiba.tech%2F)
-矢吹C|http://yabukic.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fyabukic.pm-chiba.tech%2F)
-田隈A|http://takumaa.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Ftakumaa.pm-chiba.tech%2F)
-田隈B|http://takumab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Ftakumab.pm-chiba.tech%2F)
-田隈C|http://takumac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Ftakumac.pm-chiba.tech%2F)
+下田A|https://shimodaa.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fshimodaa.pm-chiba.tech%2F)
+下田B|https://shimodab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fshimodab.pm-chiba.tech%2F)
+下田C|https://shimodac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fshimodac.pm-chiba.tech%2F)
+小笠原A|https://ogasawaraa.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fogasawaraa.pm-chiba.tech%2F)
+小笠原B|https://ogasawarab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fogasawarab.pm-chiba.tech%2F)
+小笠原C|https://ogasawarac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fogasawarac.pm-chiba.tech%2F)
+矢吹A|https://yabukia.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fyabukia.pm-chiba.tech%2F)
+矢吹B|https://yabukib.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fyabukib.pm-chiba.tech%2F)
+矢吹C|https://yabukic.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Fyabukic.pm-chiba.tech%2F)
+田隈A|https://takumaa.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Ftakumaa.pm-chiba.tech%2F)
+田隈B|https://takumab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Ftakumab.pm-chiba.tech%2F)
+田隈C|https://takumac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=http%3A%2F%2Ftakumac.pm-chiba.tech%2F)
 
 上のエラーチェックの対象はトップページ（index.html）だけだが，他のページにもHTMLがないようにすること。
