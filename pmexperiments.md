@@ -139,7 +139,9 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 
 前提：VS Codeをインストールしたときに，Gitもインストールしていること。（VS Codeでうまく行かない人は，[GitHub Desktop](https://desktop.github.com/)を試してみるとよい。操作方法は異なるが，必要なのがステージ，コミット，プッシュであることに変わりはない。）
 
-各チームのGitHubリポジトリにファイルを登録する。Visual Studio Codeで実行する方法については，「VS CodeでGitHubを使う」(git.mdを参照。
+各チームのGitHubリポジトリにファイルを登録する。Visual Studio Codeで実行する方法については，[VS CodeでGitHubを使う](git.md)を参照。
+
+**概要：htdocsというフォルダを作り，その中に公開するファイルを格納する．トップページはindex.htmlとする。**
 
 1. 作業用のフォルダを作る。（例：c:/work）
 1. エクスプローラでそのフォルダを開き，アドレス欄に「`powershell`」と入力する。（コマンド入力用のウィンドウが現れる。PowerShellを起動して，「`c:`」エンター，「`cd /work`」エンターでもよい。）
