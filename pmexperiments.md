@@ -183,4 +183,4 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 田隈B|https://takumab.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumab.pm-chiba.tech%2F)
 田隈C|https://takumac.pm-chiba.tech/|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumac.pm-chiba.tech%2F)
 
-上のエラーチェックの対象はトップページ（index.html）だけだが，他のページにもHTMLがないようにすること。
+上のエラーチェックの対象はトップページ（index.html）だけだが，他のページにもHTMLのエラーがないようにすること。
