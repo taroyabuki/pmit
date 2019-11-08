@@ -169,7 +169,7 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 各班のウェブサイトは次のとおり。
 エラーチェックの結果が「passing（緑色）」になればよい（プッシュしてしばらくすると更新される）。
 そのためには，すべてのHTMLフェイルとCSSファイルのエラーをなくすこと。
-参考までに，トップページのHTMLの文法をチェックするためのリンクを作ってある。
+参考までに，トップページのHTMLの文法をチェックするためのリンクを作ってある（VS Code上でチェックするのも簡単）。
 
 班|URL|エラーチェックの結果|トップページのチェック（参考）
 -|-|-|-
@@ -186,7 +186,7 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 田隈B|https://takumab.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-b.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumab.pm-chiba.tech%2F)
 田隈C|https://takumac.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-c.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumac.pm-chiba.tech%2F)
 
-エラーはVS Code上でチェックできるが，それでもわからない場合は矢吹に相談すること。
+トップページ以外のエラーはVS Code上でチェックするとよい．それでもわからない場合は矢吹に相談すること。
 次の方法で，自分でチェックしてもよい。
 
 1. Anaconda（Pythonの実行環境）を入れる。
