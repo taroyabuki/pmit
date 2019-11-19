@@ -31,7 +31,7 @@ cinst javaruntime vscode git -y
 名前|キーワード|メモ（使用する講義等）
 ---|---|---
 hexdump for VSCode|`hexdump`|講義「情報リテラシ」
-W3C Validation|`w3c validator`|講義「情報リテラシ」，PM実験，PM演習。Windows Security Alertが出たら，アクセスを許可する。
+W3C Validation|`w3c`|講義「情報リテラシ」，PM実験，PM演習。Windows Security Alertが出たら，アクセスを許可する。
 Japanese Language Pack for Visual Studio Code|`japanese`|日本語UIが不要なら入れなくてもよい。
 
 ## VS Codeのその他の設定
