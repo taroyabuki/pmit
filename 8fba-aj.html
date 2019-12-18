@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <title>辺の異体字</title>
+  <style>
+    .c {
+      font-family: 'Noto Serif JP';
+      font-size:xx-large;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      border: solid black 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td rowspan="2"></td>
+      <td colspan="15" style="text-align: center;">&amp;#xE010</td>
+    </tr>
+    <tr>
+      <script>
+        for (var i = 0; i < 10; ++i) {
+          document.write("<td>" + i + ";</td>");
+        }
+      </script>
+      <td>A;</td>
+      <td>B;</td>
+      <td>C;</td>
+      <td>D;</td>
+    </tr>
+    <tr>
+      <td>&amp;#x8FBA;</td>
+      <script>
+        for (var i = 0; i < 0xE; ++i) {
+          if (i == 0) document.write("<td class='c'>&#x9089;&#" + (917760 + i) + ";</td>");
+          else document.write("<td></td>");
+        }
+      </script>
+    </tr>
+    <tr>
+      <td>&amp;#x9089;</td>
+      <script>
+        for (var i = 0; i < 0xE; ++i) {
+          document.write("<td class='c'>&#x9089;&#" + (917760 + i) + ";</td>");
+        }
+      </script>
+    </tr>
+    <tr>
+      <td>&amp;#x908A;</td>
+      <script>
+        for (var i = 0; i < 0xE; ++i) {
+          if (i <= 7) document.write("<td class='c'>&#x908A;&#" + (917760 + i) + ";</td>");
+          else document.write("<td></td>");
+        }
+      </script>
+    </tr>
+  </table>
+</body>
+
+</html>
