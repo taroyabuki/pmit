@@ -1,70 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet" />
   <meta charset="UTF-8" />
   <title>辺の異体字</title>
   <style>
+    * {
+      font-family: consolas, monospace;
+      font-weight: normal;
+    }
     .c {
       font-family: 'Noto Serif JP';
-      font-size:xx-large;
+      font-size: xx-large;
     }
-
     table {
       border-collapse: collapse;
     }
-
+    th,
     td {
       border: solid black 1px;
     }
   </style>
 </head>
-
 <body>
   <table>
-    <tr>
-      <td rowspan="2"></td>
-      <td colspan="15" style="text-align: center;">&amp;#xE010</td>
-    </tr>
-    <tr>
-      <script>
-        for (var i = 0; i < 10; ++i) {
-          document.write("<td>" + i + ";</td>");
-        }
-      </script>
-      <td>A;</td>
-      <td>B;</td>
-      <td>C;</td>
-      <td>D;</td>
-    </tr>
-    <tr>
-      <td>&amp;#x8FBA;</td>
-      <script>
-        for (var i = 0; i < 0xE; ++i) {
-          if (i == 0) document.write("<td class='c'>&#x8FBA;&#" + (917760 + i) + ";</td>");
-          else document.write("<td></td>");
-        }
-      </script>
-    </tr>
-    <tr>
-      <td>&amp;#x9089;</td>
-      <script>
-        for (var i = 0; i < 0xE; ++i) {
-          document.write("<td class='c'>&#x9089;&#" + (917760 + i) + ";</td>");
-        }
-      </script>
-    </tr>
-    <tr>
-      <td>&amp;#x908A;</td>
-      <script>
-        for (var i = 0; i < 0xE; ++i) {
-          if (i <= 7) document.write("<td class='c'>&#x908A;&#" + (917760 + i) + ";</td>");
-          else document.write("<td></td>");
-        }
-      </script>
-    </tr>
+    <tbody>
+      <tr>
+        <th rowspan="2"></th>
+        <th colspan="15" style="text-align: center;">&amp;#xE010</th>
+      </tr>
+      <tr>
+        <th>0;</th>
+        <th>1;</th>
+        <th>2;</th>
+        <th>3;</th>
+        <th>4;</th>
+        <th>5;</th>
+        <th>6;</th>
+        <th>7;</th>
+        <th>8;</th>
+        <th>9;</th>
+        <th>A;</th>
+        <th>B;</th>
+        <th>C;</th>
+        <th>D;</th>
+        <th>E;</th>
+      </tr>
+      <tr>
+        <th>&amp;#x8FBA;</th>
+        <td class="c">&#x8FBA;&#xE0100;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>&amp;#x9089;</th>
+        <td class="c">&#x9089;&#xE0100;</td>
+        <td class="c">&#x9089;&#xE0101;</td>
+        <td class="c">&#x9089;&#xE0102;</td>
+        <td class="c">&#x9089;&#xE0103;</td>
+        <td class="c">&#x9089;&#xE0104;</td>
+        <td class="c">&#x9089;&#xE0105;</td>
+        <td class="c">&#x9089;&#xE0106;</td>
+        <td class="c">&#x9089;&#xE0107;</td>
+        <td class="c">&#x9089;&#xE0108;</td>
+        <td class="c">&#x9089;&#xE0109;</td>
+        <td class="c">&#x9089;&#xE010A;</td>
+        <td class="c">&#x9089;&#xE010B;</td>
+        <td class="c">&#x9089;&#xE010C;</td>
+        <td class="c">&#x9089;&#xE010D;</td>
+        <td class="c">&#x9089;&#xE010E;</td>
+      </tr>
+      <tr>
+        <th>&amp;#x908A;</th>
+        <td class="c">&#x908A;&#xE0100;</td>
+        <td class="c">&#x908A;&#xE0101;</td>
+        <td class="c">&#x908A;&#xE0102;</td>
+        <td class="c">&#x908A;&#xE0103;</td>
+        <td class="c">&#x908A;&#xE0104;</td>
+        <td class="c">&#x908A;&#xE0105;</td>
+        <td class="c">&#x908A;&#xE0106;</td>
+        <td class="c">&#x908A;&#xE0107;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
   </table>
 </body>
-
 </html>
