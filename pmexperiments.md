@@ -7,19 +7,7 @@
 
 ## 準備
 
-メンバ全員のGitHubアカウントをPMがまとめて矢吹（taro.yabuki+github@it-chiba.ac.jp）に報告する。報告の形式は以下の通り。
-
-```
-研究室・グループ名
-名前1,学生番号1,メアド1,本人のGitHubのプロフィールページ1
-名前2,学生番号2,メアド2,本人のGitHubのプロフィールページ2
-```
-
-- グループ名は`矢吹研A`などとする。
-- 1行に1人分。項目は半角カンマで区切る。
-- 本人のGitHubのプロフィールページは，https://github.com/ユーザ名 という形式になる（例：https://github.com/taroyabuki ）。**メールの送信前に，本人のプロフィールページが開くことを確認する。**
-- 報告メールでは，メンバ全員をCCに加える。
-- メンバ全員，自分に届いたメールを確認し，間違いを見つけたら至急全員宛に返信する。
+全員，GitHubのアカウントを[Googleフォーム](https://docs.google.com/forms/d/e/1FAIpQLSc7ro4KUs9GT0t3H-Aolizl1UKCPbmJA5Kv6lZlqvML4hAzvA/viewform)で報告する．
 
 **矢吹の作業後，各自にGitHubからメールが届く。このメールに対応すること。このメールの有効期限は短い。**
 
@@ -69,9 +57,9 @@ body {
 新しいページは<a href="foo.html">こちら</a>。
 ```
 
-### 文法的に正しいHTMLとCSSを書く
+### 構文が正しいHTMLとCSSを書く
 
-**最終成果物のHTMLとCSSに文法エラーがあってはいけない！**
+**最終成果物のHTMLとCSSに構文エラーがあってはいけない！**
 
 VS Codeに拡張機能W3C Validationを入れておくと，エラーの部分に赤い波線が引かれるようになる。
 それを無視しないように。
@@ -172,27 +160,27 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 各班のウェブサイトは次のとおり。
 エラーチェックの結果が「passing（緑色）」になればよい（プッシュしてしばらくすると更新される）。
 そのためには，すべてのHTMLフェイルとCSSファイルのエラーをなくすこと。
-参考までに，トップページのHTMLの文法をチェックするためのリンクを作ってある（VS Code上でチェックするのも簡単）。
+参考までに，トップページのHTMLの構文をチェックするためのリンクを作ってある（VS Code上でチェックするのも簡単）。
 
-班|URL|エラーチェックの結果|トップページのチェック（参考）
--|-|-|-
-下田A|https://shimodaa.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/shimoda-a.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fshimodaa.pm-chiba.tech%2F)
-下田B|https://shimodab.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/shimoda-b.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fshimodab.pm-chiba.tech%2F)
-下田C|https://shimodac.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/shimoda-c.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fshimodac.pm-chiba.tech%2F)
-小笠原A|https://ogasawaraa.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/ogasawara-a.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fogasawaraa.pm-chiba.tech%2F)
-小笠原B|https://ogasawarab.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/ogasawara-b.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fogasawarab.pm-chiba.tech%2F)
-小笠原C|https://ogasawarac.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/ogasawara-c.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fogasawarac.pm-chiba.tech%2F)
-矢吹A|https://yabukia.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/yabuki-a.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fyabukia.pm-chiba.tech%2F)
-矢吹B|https://yabukib.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/yabuki-b.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fyabukib.pm-chiba.tech%2F)
-矢吹C|https://yabukic.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/yabuki-c.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Fyabukic.pm-chiba.tech%2F)
-田隈A|https://takumaa.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-a.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumaa.pm-chiba.tech%2F)
-田隈B|https://takumab.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-b.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumab.pm-chiba.tech%2F)
-田隈C|https://takumac.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-c.svg?branch=master)|[実行](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftakumac.pm-chiba.tech%2F)
+班|URL|エラーチェックの結果
+-|-|-
+下田A|https://shimoda-a.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/shimoda-a.svg?branch=master)
+下田B|https://shimoda-b.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/shimoda-b.svg?branch=master)
+下田C|https://shimoda-c.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/shimoda-c.svg?branch=master)
+小笠原A|https://ogasawara-a.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/ogasawara-a.svg?branch=master)
+小笠原B|https://ogasawara-b.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/ogasawara-b.svg?branch=master)
+小笠原C|https://ogasawara-c.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/ogasawara-c.svg?branch=master)
+矢吹A|https://yabuki-a.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/yabuki-a.svg?branch=master)
+矢吹B|https://yabuki-b.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/yabuki-b.svg?branch=master)
+矢吹C|https://yabuki-c.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/yabuki-c.svg?branch=master)
+田隈A|https://takuma-a.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-a.svg?branch=master)
+田隈B|https://takuma-b.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-b.svg?branch=master)
+田隈C|https://takuma-c.pm-chiba.tech/|![Build Status](https://travis-ci.com/yabukilab/takuma-c.svg?branch=master)
 
-トップページ以外のエラーはVS Code上でチェックするとよい．それでもわからない場合は矢吹に相談すること。
-次の方法で，自分でチェックしてもよい。
+エラーをVS Code上でチェックしながら開発するとよい。それでもわからない場合は矢吹に相談すること。
 
-1. Anaconda（Pythonの実行環境）を入れる。
-2. `pip install html5validator`
-3. `cd リポジトリのトップディレクトリ`
-4. `html5validator --root htdocs/ --also-check-css`
+（メモ）GitHubで行っているのと同じチェックをローカルで行う方法は次のとおり。
+
+1. `pip install html5validator`
+1. リポジトリのトップディレクトリで
+1. `html5validator --root htdocs/ --also-check-css`
