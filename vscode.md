@@ -4,7 +4,7 @@
 
 次のソフトウェアをインストールする。
 
-1. [VS Code](https://code.visualstudio.com/)
+1. [VSCode](https://code.visualstudio.com/)
 1. [Java Runtime Environment](https://java.com/ja/download/manual.jsp)**「Windows オフライン (64ビット)」をインストールし，インストール後に一度サインアウトする．**
 1. [Git](https://git-scm.com/downloads)
 
@@ -25,4 +25,4 @@ Japanese Language Pack for Visual Studio Code|`japanese`|日本語UIが不要な
     - [フォントファイル](https://github.com/edihbrandon/RictyDiminished/raw/master/RictyDiminished-Regular.ttf)をダウンロードし，ダブルクリックで開き，「インストール」をクリックする。
     - VSCodeを再起動し，`Ctrl+,(Comma)`で設定タブを開き，検索欄に`font`と入力，Editor: Font Familyを「`Ricty Diminished`」にする。
 
-VSCodeとは関係ないが，このあたりで，ファイルの拡張子が表示されるようにしておくこと。
+VSCodeとは関係ないが，このあたりで，ファイルの拡張子が表示されるようにしておくこと。（エクスプローラの表示タブ→「ファイル名拡張子」を有効にする。）
