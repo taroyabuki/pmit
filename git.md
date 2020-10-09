@@ -8,7 +8,7 @@
 
 1. `git config --global user.name "{ユーザ名}"`を実行する。（`{ユーザ名}`の部分は適当な名前（GitHubのユーザ名など）で置き換える。）
 1. `git config --global user.email {メアド}`を実行する。（`{メアド}`の部分は適当なメアド（GitHubに登録したメアド）で置き換える。）
-1. `git clone リポジトリのURL`を実行する。（例：`git clone https://github.com/yabukilab/yabuki-a.git`）
+1. `git clone リポジトリのURL`を実行する。（例：`git clone https://github.com/yabukilab/yabuki-x.git`）
 
 ## 開発時
 
@@ -20,4 +20,4 @@
 1. メッセージを入力して，`Ctrl+Enter`（**コミット**）
 1. 「･･･」をクリックし，プルダウンメニューの「**プッシュ**」をクリックする。**（初めての時は，GitHubのユーザ名とパスワードを訊かれる。）**
 1. GitHubのウェブサイト（例：https://github.com/yabukilab/yabuki-a ）で，ファイルが更新されていることを確認する。
-1. **PM実験・演習**公開用のウェブサイト（例：http://yabukia.pm-chiba.tech/ ）が更新されていることを確認する。
+1. **PM実験・演習**公開用のウェブサイト（例：https://yabuki-a.pm-chiba.tech ）が更新されていることを確認する。
