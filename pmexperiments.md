@@ -11,6 +11,8 @@
 
 **矢吹の作業後，各自にGitHubからメールが届く。このメールに対応すること。このメールの有効期限は短い。**
 
+[この後の作業の解説動画](https://youtu.be/1WSovwUgpFw)
+
 ## ウェブページの作成
 
 * [Visual Studio Codeの導入](vscode.md)
