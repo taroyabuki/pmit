@@ -5,7 +5,7 @@
 次のソフトウェアをインストールする。
 
 1. [VSCode](https://code.visualstudio.com/)
-1. [Java Runtime Environment](https://java.com/ja/download/manual.jsp)**「Windows オフライン (64ビット)」をインストールし，インストール後に一度サインアウトする．**
+1. [Java Runtime Environment](https://java.com/ja/download/manual.jsp)**「Windows オフライン (64ビット)」をインストールし，インストール後に一度Windowsからサインアウトする．**
 1. [Git](https://git-scm.com/downloads)
 
 ## VSCodeの拡張機能
