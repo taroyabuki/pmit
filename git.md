@@ -8,6 +8,7 @@
 
 1. `git config --global user.name "{ユーザ名}"`を実行する。（`{ユーザ名}`の部分は適当な名前（GitHubのユーザ名など）で置き換える。）
 1. `git config --global user.email {メアド}`を実行する。（`{メアド}`の部分は適当なメアド（GitHubに登録したメアド）で置き換える。）
+1. `git config --global core.autocrlf false`を実行する。（改行コードの勝手な変換を抑止する。）
 1. `git clone リポジトリのURL`を実行する。（例：`git clone https://github.com/yabukilab/yabuki-x.git`）
 
 ## 開発時
