@@ -166,12 +166,12 @@ Shift+Alt+fでHTMLを整形する機能も便利である。
 
 班|URL|エラーチェックの結果
 -|-|-
-下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-a)
-下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-b)
-下田C|https://shimoda-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-c)
-小笠原A|https://ogasawara-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-a)
-小笠原B|https://ogasawara-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-b)
-小笠原C|https://ogasawara-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-c)
+下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-a)
+下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-b)
+下田C|https://shimoda-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-c)
+小笠原A|https://ogasawara-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-a)
+小笠原B|https://ogasawara-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-b)
+小笠原C|https://ogasawara-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-c)
 矢吹A|https://yabuki-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-a)
 矢吹B|https://yabuki-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-b)
 矢吹C|https://yabuki-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-c)
