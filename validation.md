@@ -37,6 +37,9 @@
   - [URLでチェック](https://validator.w3.org/#validate_by_uri)
   - [ファイルアップロードでチェック](https://validator.w3.org/#validate_by_upload)
   - [HTMLを入力してチェック](https://validator.w3.org/#validate_by_input)
+* ブラウザ上で確認する．
+    - [Firefox](https://wwws.kobe-c.ac.jp/~miura/HtmlValidator/index.html)
+    - [Chrome](https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk)
 * 補足：GitHubで行っているのと同じチェックをローカルで行う方法は次のとおり．
     1. `pip install html5validator`
     1. リポジトリのトップディレクトリで，
