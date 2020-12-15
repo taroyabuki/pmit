@@ -52,25 +52,37 @@
 
 HTMLやCSSに構文エラーがなければ「passing（緑色）」になる（プッシュしてしばらくすると更新される）．
 構文エラーがあると「failing（赤）」になる．
-構文エラーは「failing（赤）」のアイコンをクリックして確認することもできるが，見づらいため，[「正しいHTML文書」](validation.md)の方法でチェックすることを勧める．
+構文エラーは「failing（赤）」のアイコンをクリックして確認することもできるが，少し時間がかかるため，[「正しいHTML文書」](validation.md)の方法でチェックすることを勧める．
 
 チーム|URL|エラーチェックの結果
 -|-|-
-下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-a)
-下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-b)
-下田C|https://shimoda-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/shimoda-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/shimoda-c)
-小笠原A|https://ogasawara-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-a)
-小笠原B|https://ogasawara-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-b)
-小笠原C|https://ogasawara-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/ogasawara-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/ogasawara-c)
-矢吹A|https://yabuki-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-a)
-矢吹B|https://yabuki-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-b)
-矢吹C|https://yabuki-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-c)
-矢吹X|https://yabuki-x.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/yabuki-x.svg?branch=master)](https://travis-ci.com/github/yabukilab/yabuki-x)
-田隈A|https://takuma-a.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/takuma-a.svg?branch=master)](https://travis-ci.com/github/yabukilab/takuma-a)
-田隈B|https://takuma-b.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/takuma-b.svg?branch=master)](https://travis-ci.com/github/yabukilab/takuma-b)
-田隈C|https://takuma-c.pm-chiba.tech/|[![Build Status](https://travis-ci.com/yabukilab/takuma-c.svg?branch=master)](https://travis-ci.com/github/yabukilab/takuma-c)
+下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-a.svg)](https://admin.pm-chiba.tech/log/shimoda-a-validator.log)
+下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-b.svg)](https://admin.pm-chiba.tech/log/shimoda-b-validator.log)
+下田C|https://shimoda-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-c.svg)](https://admin.pm-chiba.tech/log/shimoda-c-validator.log)
+小笠原A|https://ogasawara-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-a.svg)](https://admin.pm-chiba.tech/log/ogasawara-a-validator.log)
+小笠原B|https://ogasawara-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-b.svg)](https://admin.pm-chiba.tech/log/ogasawara-b-validator.log)
+小笠原C|https://ogasawara-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-c.svg)](https://admin.pm-chiba.tech/log/ogasawara-c-validator.log)
+矢吹A|https://yabuki-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-a.svg)](https://admin.pm-chiba.tech/log/yabuki-a-validator.log)
+矢吹B|https://yabuki-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-b.svg)](https://admin.pm-chiba.tech/log/yabuki-b-validator.log)
+矢吹C|https://yabuki-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-c.svg)](https://admin.pm-chiba.tech/log/yabuki-c-validator.log)
+矢吹X|https://yabuki-x.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-x.svg)](https://admin.pm-chiba.tech/log/yabuki-x-validator.log)
+田隈A|https://takuma-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-a.svg)](https://admin.pm-chiba.tech/log/takuma-a-validator.log)
+田隈B|https://takuma-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-b.svg)](https://admin.pm-chiba.tech/log/takuma-b-validator.log)
+田隈C|https://takuma-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-c.svg)](https://admin.pm-chiba.tech/log/takuma-c-validator.log)
+
+補足：自分でチェックする場合は次の通り．（Ubuntuの場合）
+
+```bash
+# 準備
+sudo apt update
+sudo apt install default-jre
+pip3 install html5validator
+
+# チェック
+cd リポジトリのトップディレクトリ
+html5validator --root htdocs/ --also-check-css
+```
 
 ## 参考書
 
 - 大藤幹ほか『HTML+CSSデザイン 基本原則、これだけ．』（MdN, 2013）（各研究室にある．熟読はしなくていいが，全ページをめくってみることを勧める．たとえば，「PCでもスマホでも快適に読めるようにするための技術」が**ある**ことは知っておくといい．具体的にどうするかは，必要になったときに勉強する．）
-
