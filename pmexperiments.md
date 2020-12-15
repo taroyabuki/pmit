@@ -56,19 +56,19 @@ HTMLやCSSに構文エラーがなければ「passing（緑色）」になる（
 
 チーム|URL|エラーチェックの結果
 -|-|-
-下田A|https://shimoda-a.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/shimoda-a.svg' alt='build status' />](https://admin.pm-chiba.tech/log/shimoda-a-validator.log)
-下田B|https://shimoda-b.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/shimoda-b.svg' alt='build status' />](https://admin.pm-chiba.tech/log/shimoda-b-validator.log)
-下田C|https://shimoda-c.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/shimoda-c.svg' alt='build status' />](https://admin.pm-chiba.tech/log/shimoda-c-validator.log)
-小笠原A|https://ogasawara-a.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/ogasawara-a.svg' alt='build status' />](https://admin.pm-chiba.tech/log/ogasawara-a-validator.log)
-小笠原B|https://ogasawara-b.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/ogasawara-b.svg' alt='build status' />](https://admin.pm-chiba.tech/log/ogasawara-b-validator.log)
-小笠原C|https://ogasawara-c.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/ogasawara-c.svg' alt='build status' />](https://admin.pm-chiba.tech/log/ogasawara-c-validator.log)
-矢吹A|https://yabuki-a.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/yabuki-a.svg' alt='build status' />](https://admin.pm-chiba.tech/log/yabuki-a-validator.log)
-矢吹B|https://yabuki-b.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/yabuki-b.svg' alt='build status' />](https://admin.pm-chiba.tech/log/yabuki-b-validator.log)
-矢吹C|https://yabuki-c.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/yabuki-c.svg' alt='build status' />](https://admin.pm-chiba.tech/log/yabuki-c-validator.log)
-矢吹X|https://yabuki-x.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/yabuki-x.svg' alt='build status' />](https://admin.pm-chiba.tech/log/yabuki-x-validator.log)
-田隈A|https://takuma-a.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/takuma-a.svg' alt='build status' />](https://admin.pm-chiba.tech/log/takuma-a-validator.log)
-田隈B|https://takuma-b.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/takuma-b.svg' alt='build status' />](https://admin.pm-chiba.tech/log/takuma-b-validator.log)
-田隈C|https://takuma-c.pm-chiba.tech/|[<img src='https://admin.pm-chiba.tech/log/takuma-c.svg' alt='build status' />](https://admin.pm-chiba.tech/log/takuma-c-validator.log)
+下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-a.svg)](https://admin.pm-chiba.tech/log/shimoda-a-validator.log)
+下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-b.svg)](https://admin.pm-chiba.tech/log/shimoda-b-validator.log)
+下田C|https://shimoda-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-c.svg)](https://admin.pm-chiba.tech/log/shimoda-c-validator.log)
+小笠原A|https://ogasawara-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-a.svg)](https://admin.pm-chiba.tech/log/ogasawara-a-validator.log)
+小笠原B|https://ogasawara-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-b.svg)](https://admin.pm-chiba.tech/log/ogasawara-b-validator.log)
+小笠原C|https://ogasawara-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-c.svg)](https://admin.pm-chiba.tech/log/ogasawara-c-validator.log)
+矢吹A|https://yabuki-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-a.svg)](https://admin.pm-chiba.tech/log/yabuki-a-validator.log)
+矢吹B|https://yabuki-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-b.svg)](https://admin.pm-chiba.tech/log/yabuki-b-validator.log)
+矢吹C|https://yabuki-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-c.svg)](https://admin.pm-chiba.tech/log/yabuki-c-validator.log)
+矢吹X|https://yabuki-x.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-x.svg)](https://admin.pm-chiba.tech/log/yabuki-x-validator.log)
+田隈A|https://takuma-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-a.svg)](https://admin.pm-chiba.tech/log/takuma-a-validator.log)
+田隈B|https://takuma-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-b.svg)](https://admin.pm-chiba.tech/log/takuma-b-validator.log)
+田隈C|https://takuma-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-c.svg)](https://admin.pm-chiba.tech/log/takuma-c-validator.log)
 
 補足：自分でチェックする場合は次の通り．（Ubuntuの場合）
 
