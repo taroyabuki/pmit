@@ -1,6 +1,8 @@
 # VS CodeでGitHubを使う
 
-前提：[Git](https://git-scm.com/downloads)がインストールされている。
+## 準備
+
+[Git](https://git-scm.com/downloads)をインストールする．
 
 ## 初期設定
 
