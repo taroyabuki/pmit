@@ -10,15 +10,15 @@
 
 ## ウェブページの作成
 
-1. [Visual Studio Codeの導入](vscode.md)
+1. [VSCode（Visual Studio Code）の導入](vscode.md)
 1. [ウェブページを書く練習](html.md)
 1. [正しいHTML文書にする](validation.md)
 
 ## ウェブページの公開
 
-前提：VS Codeをインストールしたときに，Gitもインストールしていること．（VS Codeでうまく行かない人は，[GitHub Desktop](https://desktop.github.com/)を試してみるとよい．操作方法は異なるが，必要なのが，①ステージ，②コミット，③プッシュであることに変わりはない．）
+前提：[VSCode](vscode.md)と[Git](git.md)がインストール済み．（ただし，VSCodeでうまく行かない人は，[GitHub Desktop](https://desktop.github.com/)を試してみるとよい．操作方法は異なるが，必要なのが，①ステージ，②コミット，③プッシュであることに変わりはない．）
 
-各チームのGitHubリポジトリにファイルを登録する．Visual Studio Codeで実行する方法については，[VS CodeでGitHubを使う](git.md)を参照．
+各チームのGitHubリポジトリにファイルを登録する．Visual Studio Codeで実行する方法については，[VSCodeでGitHubを使う](git.md)を参照．
 
 概要：公開するファイルを，フォルダ**htdocs**の中に保存する．トップページは**index.html**である．
 
