@@ -34,7 +34,7 @@
 
 構文のチェックは機械的にできる．
 
-* VS Code + W3C Validator **（推奨）**
+* VSCode + W3C Web Validator **（推奨）**
 * W3C Markup Validation Service
   - [URLでチェック](https://validator.w3.org/#validate_by_uri)
   - [ファイルアップロードでチェック](https://validator.w3.org/#validate_by_upload)
@@ -50,7 +50,7 @@
 ## 練習
 
 次のようなHTML文書の構文エラーを修正してみよう．
-エラーはVS Code上で確認することを推奨する．それができない人用→[W3C HTML Validatorの結果](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftaroyabuki.github.io%2Fpmit%2Finvalid.html)
+エラーはVSCode上で確認することを推奨する．それができない人用→[W3C HTML Validatorの結果](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftaroyabuki.github.io%2Fpmit%2Finvalid.html)
 
 ```html
 <!DOCTYPE html>
@@ -110,4 +110,4 @@
 <div><a href="foo.html">こちら</a></div>
 ```
 
-すべて修正すると，構文エラーがなくなることを確認してください．
+すべて修正すると，構文エラーがなくなることを確認してほしい．
