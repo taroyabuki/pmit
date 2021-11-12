@@ -3,6 +3,7 @@
 ## インストール
 
 [VSCode](https://code.visualstudio.com/)をダウンロードしてインストールする．
+`winget install Microsoft.VisualStudioCode`でもよい．
 
 ## VSCodeの拡張機能
 
