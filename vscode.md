@@ -1,7 +1,10 @@
 # VSCode（Visual Studio Code）の導入
 
-補足：自分のPCにVSCodeをインストールしなくても，GitHub上でキーボードの「.」をクリックすれば，ブラウザ上でVSCodeが使える．
+補足：自分のPCにVSCodeをインストールしなくても，次のいずれかの方法で，ブラウザ上でVSCodeが使える．
 W3C Web Validationは動かないようだが，簡単なファイル編集ならこれで十分かもしれない．
+
+- GitHub上でキーボードの「.」（ドット）をクリックする．
+- URLの`github.com`を`github.dev`に変える．
 
 ## インストール
 
