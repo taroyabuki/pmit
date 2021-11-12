@@ -42,7 +42,7 @@
 * ブラウザ上で確認する．
     - [Firefox](https://wwws.kobe-c.ac.jp/~miura/HtmlValidator/index.html)
     - [Chrome](https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk)
-* 補足：GitHubで行っているのと同じチェックをローカルで行う方法は次のとおり．
+* 補足：PM実験のサーバで行っているのと同じチェックをローカルで行う方法は次のとおり．（WSLを使うのが簡単．）
     1. `pip install html5validator`
     1. リポジトリのトップディレクトリで，
     1. `html5validator --root htdocs/ --also-check-css`
