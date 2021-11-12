@@ -1,11 +1,5 @@
 # VSCode（Visual Studio Code）の導入
 
-補足：自分のPCにVSCodeをインストールしなくても，次のいずれかの方法で，ブラウザ上でVSCodeが使える．
-W3C Web Validationは動かないようだが，簡単なファイル編集ならこれで十分かもしれない．
-
-- GitHub上でキーボードの「.」（ドット）をクリックする．
-- URLの`github.com`を`github.dev`に変える．
-
 ## インストール
 
 [VSCode](https://code.visualstudio.com/)をダウンロードしてインストールする．
@@ -26,5 +20,11 @@ Japanese Language Pack for Visual Studio Code|`japanese`|日本語UIが不要な
 - 全角空白を見やすくするために，フォントRicty Diminishedを導入する．
     - [フォントファイル](https://github.com/edihbrandon/RictyDiminished/raw/master/RictyDiminished-Regular.ttf)をダウンロードし，ダブルクリックで開き，「インストール」をクリックする．
     - VSCodeを再起動し，`Ctrl+,(Comma)`で設定タブを開き，検索欄に`font`と入力，Editor: Font Familyを「`Ricty Diminished`」にする．
+
+補足：自分のPCにVSCodeをインストールしなくても，次のいずれかの方法で，ブラウザ上でVSCodeが使える．
+W3C Web Validationは動かないようだが，簡単なファイル編集ならこれで十分かもしれない．
+
+- GitHub上でキーボードの「.」（ドット）をクリックする．
+- URLの`github.com`を`github.dev`に変える．
 
 VSCodeとは関係ないが，このあたりで，ファイルの拡張子が表示されるようにしておくこと．（エクスプローラの表示タブ→「ファイル名拡張子」を有効にする．）
