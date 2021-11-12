@@ -43,7 +43,7 @@
     - [Firefox](https://wwws.kobe-c.ac.jp/~miura/HtmlValidator/index.html)
     - [Chrome](https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk)
 
-補足：自分でチェックする場合は次の通り．（Ubuntuの場合）
+補足：自分でチェックする場合は次の通り．（Ubuntuの場合．WSLで試すのが簡単．）
 
 ```bash
 # 準備

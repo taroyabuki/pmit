@@ -2,7 +2,7 @@
 
 ## 準備
 
-1. [Git](https://git-scm.com/downloads)をインストールする．`winget install Git.Git`でもよい．
+1. [Git](https://git-scm.com/downloads)をインストールする．PowerShellで`winget install Git.Git`としてもよい．
 1. VSCodeを起動し，`Ctrl+@`でターミナルを開き，以下を実行する．
     1. `git config --global user.name "ユーザ名"`を実行する．（`ユーザ名`の部分は適当な名前（GitHubのユーザ名など）で置き換える．）
     1. `git config --global user.email メアド`を実行する．（`メアド`の部分は適当なメアド（GitHubに登録したメアド）で置き換える．）
