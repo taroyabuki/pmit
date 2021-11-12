@@ -34,7 +34,7 @@
 
 構文のチェックは機械的にできる．
 
-* VSCode + W3C Web Validator **（推奨）**
+* [VSCode + W3C Web Validator](vscode.md) **（推奨）**
 * W3C Markup Validation Service
   - [URLでチェック](https://validator.w3.org/#validate_by_uri)
   - [ファイルアップロードでチェック](https://validator.w3.org/#validate_by_upload)
@@ -42,10 +42,19 @@
 * ブラウザ上で確認する．
     - [Firefox](https://wwws.kobe-c.ac.jp/~miura/HtmlValidator/index.html)
     - [Chrome](https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk)
-* 補足：PM実験のサーバで行っているのと同じチェックをローカルで行う方法は次のとおり．（WSLを使うのが簡単．）
-    1. `pip install html5validator`
-    1. リポジトリのトップディレクトリで，
-    1. `html5validator --root htdocs/ --also-check-css`
+
+補足：自分でチェックする場合は次の通り．（Ubuntuの場合）
+
+```bash
+# 準備
+sudo apt update
+sudo apt install -y default-jre python3-pip
+pip install html5validator
+
+# チェック
+cd リポジトリのトップディレクトリ
+html5validator --root htdocs/ --also-check-css
+```
 
 ## 練習
 

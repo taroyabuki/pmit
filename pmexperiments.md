@@ -71,19 +71,6 @@ HTMLやCSSに構文エラーがなければ![passing（緑色）](img/passing.sv
 田隈B|https://takuma-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-b.svg)](https://admin.pm-chiba.tech/log/takuma-b-validator.log)
 田隈C|https://takuma-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-c.svg)](https://admin.pm-chiba.tech/log/takuma-c-validator.log)
 
-補足：自分でチェックする場合は次の通り．（Ubuntuの場合）
-
-```bash
-# 準備
-sudo apt update
-sudo apt install default-jre
-pip3 install html5validator
-
-# チェック
-cd リポジトリのトップディレクトリ
-html5validator --root htdocs/ --also-check-css
-```
-
 ## 参考書
 
 - [大藤幹ほか『HTML+CSSデザイン 基本原則、これだけ．』（MdN, 2013）](https://calil.jp/book/4844363581)
