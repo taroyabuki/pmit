@@ -1,4 +1,4 @@
-![QR](pmit.png)
+![QR](img/pmit.png)
 
 文書|メモ（使用講義等）
 ---|---
