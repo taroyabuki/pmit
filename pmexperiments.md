@@ -43,19 +43,19 @@
 - https://github.com/yabukilab/yabuki-a
 - https://github.com/yabukilab/yabuki-b
 - https://github.com/yabukilab/yabuki-c
+- https://github.com/yabukilab/yabuki-x
 - https://github.com/yabukilab/takuma-a
 - https://github.com/yabukilab/takuma-b
 - https://github.com/yabukilab/takuma-c
 
 ### 各チームのウェブサイト
 
-HTMLやCSSに構文エラーがなければ「passing（緑色）」になる（プッシュしてしばらくすると更新される）．
-構文エラーがあると「failing（赤）」になる．
-構文エラーは「failing（赤）」のアイコンをクリックして確認することもできるが，少し時間がかかるため，[「正しいHTML文書」](validation.md)の方法でチェックすることを勧める．
-ブラウザのキャッシュのせいでアイコンが変わらない場合がある．
-おかしいと思ったら，Shiftを押しながら更新ボタンをクリックしてみよ．
+HTMLやCSSに構文エラーがなければ![passing（緑色）](img/passing.svg)になる（プッシュしてしばらくすると更新される）．
+構文エラーがあると![failing（赤）](img/failing.svg)になる．
+エラーは![failing（赤）](img/failing.svg)をクリックして確認できる．
+しかし，[「正しいHTML文書」](validation.md)の方法で，VSCode上でチェックすることを勧める．
 
-チーム|URL|エラーチェックの結果
+チーム|URL|エラーチェックの結果（クリックでエラー表示）
 -|-|-
 下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-a.svg)](https://admin.pm-chiba.tech/log/shimoda-a-validator.log)
 下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-b.svg)](https://admin.pm-chiba.tech/log/shimoda-b-validator.log)
@@ -86,5 +86,5 @@ html5validator --root htdocs/ --also-check-css
 
 ## 参考書
 
-- 大藤幹ほか『HTML+CSSデザイン 基本原則、これだけ．』（MdN, 2013）
-- エビスコム『HTML5&CSS3デザイン 現場の新標準ガイド 体系的に学ぶＨＴＭＬとＣＳＳの仕様と実践』（マイナビ, 第2版, 2020）
+- [大藤幹ほか『HTML+CSSデザイン 基本原則、これだけ．』（MdN, 2013）](https://calil.jp/book/4844363581)
+- [エビスコム『HTML5&CSS3デザイン 現場の新標準ガイド 体系的に学ぶＨＴＭＬとＣＳＳの仕様と実践』（マイナビ, 第2版, 2020）](https://calil.jp/book/4839974594)
