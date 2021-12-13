@@ -18,9 +18,6 @@ Japanese Language Pack for Visual Studio Code|`japanese`|日本語UIが不要な
 ## VSCodeのその他の設定
 
 - 空白文字を見やすくするために，`Ctrl+,(Comma)`で設定タブを開き，検索欄に`whitespace`と入力，Editor: Render Whitespaceを「all」にする．
-- 全角空白を見やすくするために，フォントRicty Diminishedを導入する．
-    - [フォントファイル](https://github.com/edihbrandon/RictyDiminished/raw/master/RictyDiminished-Regular.ttf)をダウンロードし，ダブルクリックで開き，「インストール」をクリックする．
-    - VSCodeを再起動し，`Ctrl+,(Comma)`で設定タブを開き，検索欄に`font`と入力，Editor: Font Familyを「`Ricty Diminished`」にする．
 
 補足：自分のPCにVSCodeをインストールしなくても，次のいずれかの方法で，ブラウザ上でVSCodeが使える．
 W3C Web Validationは動かないようだが，簡単なファイル編集ならこれで十分かもしれない．
