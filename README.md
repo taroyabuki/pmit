@@ -6,4 +6,4 @@
 [VSCodeでGitHubを使う](git.md)|講義「情報リテラシ」・PM実験・PM演習
 [PM実験（2年）でやること（技術編）](pmexperiments.md)|
 [PM演習（3年）でやること（技術編）](https://github.com/taroyabuki/pmpractice2)|
-[Dockerの導入](docker.md)|
+[Dockerの導入](docker)|

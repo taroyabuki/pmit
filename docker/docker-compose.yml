@@ -13,19 +13,20 @@ services:
       MYSQL_ROOT_PASSWORD: pass
       #(3)
       MYSQL_DATABASE: mydb
-      MYSQL_USER: test
+      MYSQL_USER: testuser
       MYSQL_PASSWORD: pass
     volumes:
       - my_volume:/var/lib/mysql #(4)
-      - .:/root/host #(5)
 
   php:
-    image: taroyabuki/php-pdo:7.2 #(6)
+    image: taroyabuki/php-pdo:7.2 #(5)
     restart: always
+    environment:
+      MYSQL_SERVER: mysql #(6)
     ports:
       - "80:80" #(7)
     volumes:
-      - ./html:/var/www/html #(8)
+      - ./htdocs:/var/www/html #(8)
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
