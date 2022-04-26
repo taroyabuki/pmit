@@ -82,7 +82,7 @@ wget https://raw.githubusercontent.com/taroyabuki/pmit/master/docker/docker-comp
 
 全体の構成は図のとおり．
 
-![](image.svg)
+[![](image.svg)](image.md)
 
 補足説明（詳細は[docker-compose.yml](docker-compose.yml])を参照）
 
