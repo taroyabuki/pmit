@@ -7,7 +7,7 @@ Dockerの概要は『ゼロからはじめるデータサイエンス入門』�
 1. Windows updateでWindowsを最新状態にする．
 1. WSL2のインストール
 
-スタートメニューを右クリック→Windows PowerShell（管理者）で次を実行する．
+スタートメニューを右クリック→Windows PowerShell（管理者）で次を実行する．（初回起動時にユーザ名とパスワードを設定する．パスワードは画面に表示されない．）
 
 ```bash
 wsl --install -d Ubuntu
@@ -61,4 +61,4 @@ Name:   www.google.com
 Address: 216.58.220.100
 ```
 
-うまく行かない場合は，画面右下のDockerアイコンを右クリック→Settings→Resources→Networkを確認する．千葉工大のDNSは10.64.7.184．ただし，これを手動で設定すると，自宅で使えなくなる．
+うまく行かない場合は，画面右下のDockerアイコンを右クリック→Settings→Resources→Networkを確認する．アクセスできないサーバがDNSとして設定されているとうまく行かない．
