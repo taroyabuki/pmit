@@ -1,0 +1,38 @@
+version: "3"
+
+#(1)
+volumes:
+  my_volume:
+
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      #(2)
+      MYSQL_ROOT_PASSWORD: pass
+      #(3)
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: test
+      MYSQL_PASSWORD: pass
+    volumes:
+      - my_volume:/var/lib/mysql #(4)
+      - .:/root/host #(5)
+
+  php:
+    image: taroyabuki/php-pdo:7.2 #(6)
+    restart: always
+    ports:
+      - "80:80" #(7)
+    volumes:
+      - ./html:/var/www/html #(8)
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80" #(9)
+    environment:
+      PMA_HOST: mysql #(10)
+#      PMA_USER: root
+#      PMA_PASSWORD: pass
