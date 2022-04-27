@@ -82,13 +82,13 @@ http://localhost:80/info.php にアクセスして，画面が出てくれば成
 
 複数のコンテナをまとめて管理する，docker composeを使う．
 
-その設定ファイル[docker-compose.yml](docker-compose.yml])をダウンロードしておく（1回だけ実行すればよい）．
+その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．
 
 ```bash
 wget https://raw.githubusercontent.com/taroyabuki/pmit/master/docker/docker-compose.yml
 ```
 
-全体の構成は図のとおり（詳細は[docker-compose.yml](docker-compose.yml])を参照）．
+全体の構成は図のとおり（詳細は[docker-compose.yml](docker-compose.yml)を参照）．
 
 [![](image.svg)](image.md)
 
