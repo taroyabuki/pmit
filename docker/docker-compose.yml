@@ -1,6 +1,6 @@
 version: "3"
 
-#Dockerのボリューム`my_volume`を作る．
+#(1) Dockerのボリューム`my_volume`を作る．
 volumes:
   my_volume:
 
@@ -9,29 +9,29 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: pass #MySQLの管理者（root）のパスワードは`pass`．
-      MYSQL_DATABASE: mydb #データベースmydbに
+      MYSQL_ROOT_PASSWORD: pass #(2) MySQLの管理者（root）のパスワードは`pass`．
+      MYSQL_DATABASE: mydb #(3) データベースmydbに
       MYSQL_USER: testuser #アクセスするユーザ`testuser`の
       MYSQL_PASSWORD: pass #パスワードは`pass`．
     volumes:
-      - my_volume:/var/lib/mysql #my_volumeにMySQLのデータを保存する．
+      - my_volume:/var/lib/mysql #(4) my_volumeにMySQLのデータを保存する．
 
   php:
-    image: taroyabuki/php-pdo:7.2
+    image: taroyabuki/php-pdo:7.2 #(5)
     restart: always
     environment:
       MYSQL_SERVER: mysql
     ports:
-      - "80:80" #ウェブサーバにはポート80でアクセスする．
+      - "80:80" #(7) ウェブサーバにはポート80でアクセスする．
     volumes:
-      - ./htdocs:/var/www/html
+      - ./htdocs:/var/www/html #(6)
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - "8080:80" #phpMyAdminにはポート8080でアクセスする．
+      - "8080:80" #(8) phpMyAdminにはポート8080でアクセスする．
     environment:
-      PMA_HOST: mysql #参照：https://hub.docker.com/r/phpmyadmin/phpmyadmin/
+      PMA_HOST: mysql #(9) 参照：https://hub.docker.com/r/phpmyadmin/phpmyadmin/
 #      PMA_USER: root
 #      PMA_PASSWORD: pass
