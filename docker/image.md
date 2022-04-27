@@ -9,7 +9,7 @@ skinparam {
 rectangle Docker as "Docker Compose" {
   cloud containers as "Containers" {
     rectangle php as "(5) PHP (php-pdo)" {
-      file phpfile2 as "/var/www/html"
+      file html as "/var/www/html"
     }
     rectangle mysql as "MySQL\n(2) root: pass\n(3) testuser: pass" {
       database mydb as "mydb"
@@ -20,9 +20,7 @@ rectangle Docker as "Docker Compose" {
 }
 rectangle browser as "Browser"
 actor user
-file web/htdocs {
-  file html as ".php, .html, .css"
-}
+file htdocs as "web/htdocs"
 
 user-up-browser
 browser-up-php:(7) 80
@@ -30,7 +28,7 @@ browser-up-phpmyadmin:(8) 8080
 
 mydb-up-volume:(4)
 
-html-up-phpfile2:(6)
+htdocs-up-html:(6)
 phpmyadmin-mysql:(9)
 
 @enduml
