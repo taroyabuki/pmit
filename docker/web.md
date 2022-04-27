@@ -144,7 +144,7 @@ web
     ├── db.php
     ├── hello-db.php
     ├── info.php
-    └── show-all1.php
+    └── show-all2.php
 ```
 
 #### [PHPとMySQL](https://github.com/taroyabuki/pmpractice2/blob/master/docs/phpmysql.md)
