@@ -8,7 +8,7 @@ Dockerの概要は『ゼロからはじめるデータサイエンス入門』�
 
 ### コンテナの削除
 
-`docker ps -a`で出てくるコンテナを次のように削除する．（`-f`は動作中のコンテナも強制的に削除するためのオプション）
+`docker ps -a`で出てくるコンテナを次のように削除する．（`-f`は動作中のコンテナも強制的に削除するためのオプション．CONTAINER IDは，他と識別できる文字数だけ入力すればよい．）
 
 ```bash
 docker rm -f コンテナ名
@@ -20,7 +20,7 @@ docker rm -f CONTAINER ID
 
 ### イメージの削除
 
-`docker images`で出てくるイメージを次のように削除する．（`-f`はそのイメージから作られたコンテナがっても強制的に削除するためのオプション）
+`docker images`で出てくるイメージを次のように削除する．（`-f`はそのイメージから作られたコンテナがっても強制的に削除するためのオプション．IMAGE IDは，他と識別できる文字数だけ入力すればよい．）
 
 ```bash
 docker rmi -f REPOSITORY
@@ -74,6 +74,8 @@ http://localhost:80/info.php にアクセスして，画面が出てくれば成
 
 [![](php.svg)](php.md)
 
+補足：
+
 1. php-pdo:7.2というイメージをもとにコンテナを作っている．ちなみに，このイメージは，PHP 7.2にMySQLに接続するためのライブラリ（PDO）を追加したものである（[Dockerfile](php-pdo/Dockerfile)）．
 2. コンテナのウェブサーバが公開するファイルは/var/www/htmlに置くことになっている．このフォルダはホストのweb/htdocsと同じものである．だから，web/htdocsに置いたファイルがウェブサーバ経由で閲覧できることになる．
 3. コンテナのウェブサーバには，ホストのポート80経由でアクセスする．
@@ -82,7 +84,7 @@ http://localhost:80/info.php にアクセスして，画面が出てくれば成
 
 複数のコンテナをまとめて管理する，docker composeを使う．
 
-その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．
+その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，すべての作業はこのdocker-compose.ymlがあるフォルダで行う．**
 
 ```bash
 wget https://raw.githubusercontent.com/taroyabuki/pmit/master/docker/docker-compose.yml
@@ -126,10 +128,10 @@ $ docker rm -f 884 086 2de #削除
 - ウェブアプリの動作確認は，http://localhost で行う．例えば，練習で作ったinfo.phpには，http://localhost/info.php で閲覧できる．
 - MySQLの操作方法：
     - （簡単）[phpMyAdmin](http://localhost:8080)（ユーザ名は`root`，パスワードは`pass`）
-    - （慣れた人向け）コンソールを使う：`docker exec -it web-mysql-1 bash -c "mysql -uroot -ppass mydb"`
+    - （慣れた人向け）コンソールを使う：`docker compose exec mysql mysql -uroot -ppass mydb`
 - データベースをダンプする方法（mydb.sqlができる）：
-    - テーブルを作り直さない場合：`docker exec -it web-mysql-1 bash -c "mysqldump -uroot -ppass mydb" > mydb.sql`
-    - テーブルを作り直す場合：`docker exec -it web-mysql-1 bash -c "mysqldump -uroot -ppass --add-drop-table mydb" > mydb.sql`
+    - テーブルを作り直さない場合：`docker compose exec mysql mysqldump -uroot -ppass mydb > mydb.sql`
+    - テーブルを作り直す場合：`docker compose exec  mysql mysqldump -uroot -ppass --add-drop-table mydb > mydb.sql`
 
 ### 練習
 
@@ -152,10 +154,10 @@ web
 1. データベースmydbはできている．
 1. テーブルtable1を作る．
 
-そのためにMySQLに接続する（phpMyAdminを使ってもよい）．
+そのためにMySQLに接続する（[phpMyAdmin](http://localhost:8080)を使ってもよい）．
 
 ```bash
-docker exec -it web-mysql-1 bash -c "mysql -uroot -ppass mydb"
+docker compose exec mysql mysql -uroot -ppass mydb
 ```
 
 次のSQLを実行する（詳細は[データベースの操作](https://github.com/taroyabuki/pmpractice2/blob/master/docs/sql.md)を参照）．
@@ -176,11 +178,11 @@ insert into table1 (id, varcharA, intA, intB) values
 exit
 ```
 
-3. web/htdocsに，ファイルdb.phpを作る．http://localhost/db.php にアクセスして，エラーが表示されないことを確認する．
-4. web/htdocsに，ファイルhello-db.phpを作る．http://localhost/hello-db.php にアクセスして，エラーが表示されないことを確認する．
+3. web/htdocsに，ファイル[db.php](https://github.com/taroyabuki/pmpractice2/blob/master/db.php)を作る．http://localhost/db.php にアクセスして，エラーが表示されないことを確認する．
+4. web/htdocsに，ファイル[hello-db.php](https://github.com/taroyabuki/pmpractice2/blob/master/docs/hello-db.php)を作る．http://localhost/hello-db.php にアクセスして，エラーが表示されないことを確認する．
 
 #### [全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)
 
-5. web/htdocsに，ファイルshow-all2.phpを作る．http://localhost/show-all2.php でデータが表示されることを確かめる．
+5. web/htdocsに，ファイル[show-all2.php](https://github.com/taroyabuki/pmpractice2/blob/master/patterns/show-all/show-all2.php)を作る．http://localhost/show-all2.php でデータが表示されることを確かめる．
 
 後は[PM演習](https://github.com/taroyabuki/pmpractice2)の順番で勉強していけばいい．
