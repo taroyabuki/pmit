@@ -1,6 +1,6 @@
 version: "3"
 
-#(1) Dockerのボリューム`my_volume`を作る．
+#(1) ボリュームmy_volumeを作る．
 volumes:
   my_volume:
 
@@ -10,8 +10,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: pass #(2) MySQLの管理者（root）のパスワードは`pass`．
-      MYSQL_DATABASE: mydb #(3) データベースmydbに
-      MYSQL_USER: testuser #アクセスするユーザ`testuser`の
+      MYSQL_DATABASE: mydb #(3) データベースmydbにアクセスする，
+      MYSQL_USER: testuser #ユーザ`testuser`の
       MYSQL_PASSWORD: pass #パスワードは`pass`．
     volumes:
       - my_volume:/var/lib/mysql #(4) my_volumeにMySQLのデータを保存する．
