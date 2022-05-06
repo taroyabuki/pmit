@@ -45,10 +45,11 @@ docker volume rm VOLUME NAME
 PHPのコンテナを用意し，HTMLファイルを配信する．
 
 1. 適当な場所に「web」という名前のフォルダを作り，それをExplorerで開く．**以下，すべての作業はこのフォルダで行う．**
-1. アドレス欄に`bash`と入力し，Enterを押す．（bashが起動し，フォルダwebがカレントディレクトリになる．）
+1. アドレス欄に`bash`と入力し，Enterを押す．（bashが起動し，フォルダwebがカレントディレクトリになる．以下，このウィンドウを**ターミナル**と呼ぶ．コマンドは，このターミナルで入力し，実行する．）
 1. フォルダhtdocsとファイルhtdocs/test.txtを作る．
 
 ```bash
+# ターミナルで実行する．
 mkdir htdocs
 echo "<?php phpinfo();" > htdocs/info.php
 ```
@@ -65,6 +66,7 @@ web                    # すべての作業はこのフォルダで行う．
 4. ウェブサーバを起動し，info.phpにアクセスする（終了はCtrl-c, Ctrl-c）．
 
 ```bash
+# ターミナルで実行する．
 docker run --rm -it -p 80:80 -v $(pwd)/htdocs:/var/www/html taroyabuki/php-pdo:7.2
 ```
 
@@ -87,6 +89,7 @@ http://localhost:80/info.php にアクセスして，画面が出てくれば成
 その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，すべての作業はこのdocker-compose.ymlがあるフォルダで行う．**
 
 ```bash
+# ターミナルで実行する．
 wget https://raw.githubusercontent.com/taroyabuki/pmit/master/docker/docker-compose.yml
 ```
 
@@ -97,6 +100,8 @@ wget https://raw.githubusercontent.com/taroyabuki/pmit/master/docker/docker-comp
 開発環境の起動と停止は次のとおり．
 
 ```bash
+# ターミナルで実行する．
+
 #起動
 docker compose up -d
 
@@ -113,13 +118,19 @@ docker compose down
 こういう場合は開発環境を停止させればいいのだが，それがうまく行かない場合は，`docker ps`で残っているコンテナを確認して，`docker rm`で削除する．削除の際は，コンテナを識別するのに十分なだけCONTAINER IDを入力する．
 
 ```bash
-$ docker ps #確認
+# ターミナルで実行する．
+docker ps #以下は結果の例
 CONTAINER ID   IMAGE                    COMMAND                  CREATED        STATUS        PORTS                  NAMES
 8846c6f8a068   taroyabuki/php-pdo:7.2   "docker-php-entrypoi…"   12 hours ago   Up 12 hours   0.0.0.0:80->80/tcp     web-php-1
 0865bf577c46   mysql:5.7                "docker-entrypoint.s…"   12 hours ago   Up 12 hours   3306/tcp, 33060/tcp    web-mysql-1
 2de8fc0818a3   phpmyadmin/phpmyadmin    "/docker-entrypoint.…"   12 hours ago   Up 12 hours   0.0.0.0:8080->80/tcp   web-phpmyadmin-1
+```
 
-$ docker rm -f 884 086 2de #削除
+上のような結果を見て，削除対象を確認し，削除する．上の，「2de8fc0818a3   phpmyadmin/phpmyadmin・・・」を削除するなら次のとおり．
+
+```bash
+# ターミナルで実行する．
+docker rm -f 884 086 2de
 ```
 
 ### 開発の概要
@@ -157,6 +168,7 @@ web
 そのためにMySQLに接続する（[phpMyAdmin](http://localhost:8080)を使ってもよい）．
 
 ```bash
+# ターミナルで実行する．
 docker compose exec mysql mysql -uroot -ppass mydb
 ```
 
