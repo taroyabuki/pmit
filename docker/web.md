@@ -197,7 +197,7 @@ exit
 
 #### 全データ表示（実装）
 
-[全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)の作業をしてから，
+[全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)の一部を試す．
 
 5. web/htdocsに，ファイル[show-all2.php](https://github.com/taroyabuki/pmpractice2/blob/master/patterns/show-all/show-all2.php)を作る．http://localhost/show-all2.php でデータが表示されることを確かめる．
 
