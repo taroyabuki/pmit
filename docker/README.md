@@ -55,7 +55,7 @@ This message shows that your installation appears to be working correctly.
 PowerShellで次を実行する．
 
 ```bash
-docker run -it --rm busybox nslookup -type=a www.google.com
+docker run --rm busybox nslookup -type=a www.google.com
 ```
 
 次のようなメッセージが表示されればよい（完全に同じで無くてもよい）．
