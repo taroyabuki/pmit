@@ -137,9 +137,9 @@ docker rm -f 884 086 2de
 
 - .php, .html, .cssはホストのVS codeで編集する．（VS Codeの拡張機能「Remote Development」を使って，コンテナに接続して編集することもできるが，詳細は割愛）
 - ウェブアプリの動作確認は，http://localhost で行う．例えば，練習で作ったinfo.phpには，http://localhost/info.php で閲覧できる．
-- MySQLの操作方法：
-    - （簡単）[phpMyAdmin](http://localhost:8080)（ユーザ名は`root`，パスワードは`pass`）
-    - （慣れた人向け）コンソールを使う：`docker compose exec mysql mysql -uroot -ppass mydb`
+- MySQLの操作方法（2種類）：
+    - コンソールを使う．（`docker compose exec mysql mysql -uroot -ppass mydb`）**←ここではこの方法を使う．**
+    - [phpMyAdmin](http://localhost:8080)を使う．（ユーザ名は`root`，パスワードは`pass`）
 - データベースをダンプする方法（mydb.sqlができる）：
     - テーブルを作り直さない場合：`docker compose exec mysql mysqldump -uroot -ppass mydb > mydb.sql`
     - テーブルを作り直す場合：`docker compose exec  mysql mysqldump -uroot -ppass --add-drop-table mydb > mydb.sql`
@@ -162,19 +162,18 @@ web
 
 #### PHPとMySQL
 
-[PHPとMySQL](https://github.com/taroyabuki/pmpractice2/blob/master/docs/phpmysql.md)の作業をやってみるのだが，
-
-1. データベースmydbはできている．
-1. テーブルtable1を作る．
+[PHPとMySQL](https://github.com/taroyabuki/pmpractice2/blob/master/docs/phpmysql.md)の作業をやってみるのだが，データベースmydbはすでにできている．あとは，テーブルtable1を作ればよい．
 
 そのためにMySQLに接続する（[phpMyAdmin](http://localhost:8080)を使ってもよい）．
+
+1. docker-compose.ymlのあるディレクトリで，次を実行する．（エクスプローラーでフォルダを開き，アドレス欄に`bash`を入力，エンター）
 
 ```bash
 # ターミナルで実行する．
 docker compose exec mysql mysql -uroot -ppass mydb
 ```
 
-次のSQLを実行する（詳細は[データベースの操作](https://github.com/taroyabuki/pmpractice2/blob/master/docs/sql.md)を参照）．
+2. 「`mysql>`」というプロンプトが出たら，SQLを貼り付けて実行する（詳細は[データベースの操作](https://github.com/taroyabuki/pmpractice2/blob/master/docs/sql.md)を参照．ただし，コンソールの起動方法やphpMyAdminのURLが，ここでの想定とは違っている．）．
 
 ```sql
 create table table1 (
