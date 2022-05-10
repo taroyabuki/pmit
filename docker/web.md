@@ -160,7 +160,9 @@ web
     └── show-all2.php
 ```
 
-#### [PHPとMySQL](https://github.com/taroyabuki/pmpractice2/blob/master/docs/phpmysql.md)
+#### PHPとMySQL
+
+[PHPとMySQL](https://github.com/taroyabuki/pmpractice2/blob/master/docs/phpmysql.md)の作業をやってみるのだが，
 
 1. データベースmydbはできている．
 1. テーブルtable1を作る．
@@ -193,7 +195,9 @@ exit
 3. web/htdocsに，ファイル[db.php](https://github.com/taroyabuki/pmpractice2/blob/master/db.php)を作る．http://localhost/db.php にアクセスして，エラーが表示されないことを確認する．
 4. web/htdocsに，ファイル[hello-db.php](https://github.com/taroyabuki/pmpractice2/blob/master/docs/hello-db.php)を作る．http://localhost/hello-db.php にアクセスして，エラーが表示されないことを確認する．
 
-#### [全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)
+#### 全データ表示（実装）
+
+[全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)の作業をしてから，
 
 5. web/htdocsに，ファイル[show-all2.php](https://github.com/taroyabuki/pmpractice2/blob/master/patterns/show-all/show-all2.php)を作る．http://localhost/show-all2.php でデータが表示されることを確かめる．
 
