@@ -86,7 +86,7 @@ http://localhost:80/info.php にアクセスして，画面が出てくれば成
 
 複数のコンテナをまとめて管理する，docker composeを使う．
 
-その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，このdocker-compose.ymlがある場所を，コンソールのカレントディレクトリとして作業する．**
+その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，このdocker-compose.ymlがある場所を，コンソールのカレントディレクトリとして作業する．**ファイルを作る作業はホスト側でやればいいが，間違わないために，エクスプローラーは拡張子を表示するように設定しておいた方がいい．
 
 ```bash
 # ターミナルで実行する．
@@ -191,8 +191,8 @@ insert into table1 (id, varcharA, intA, intB) values
 exit
 ```
 
-3. web/htdocsに，ファイル[db.php](https://github.com/taroyabuki/pmpractice2/blob/master/db.php)を作る．http://localhost/db.php にアクセスして，エラーが表示されないことを確認する．
-4. web/htdocsに，ファイル[hello-db.php](https://github.com/taroyabuki/pmpractice2/blob/master/docs/hello-db.php)を作る．http://localhost/hello-db.php にアクセスして，エラーが表示されないことを確認する．
+3. web/htdocsに，ファイル[db.php](https://github.com/taroyabuki/pmpractice2/blob/master/db.php)を作る（エクスプローラーで新規作成→テキスト文書）．http://localhost/db.php にアクセスして，エラーが表示されないことを確認する．
+4. web/htdocsに，ファイル[hello-db.php](https://github.com/taroyabuki/pmpractice2/blob/master/docs/hello-db.php)を作る（エクスプローラーで新規作成→テキスト文書）．http://localhost/hello-db.php にアクセスして，エラーが表示されないことを確認する．
 
 #### 全データ表示（実装）
 
