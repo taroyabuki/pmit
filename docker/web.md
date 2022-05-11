@@ -8,7 +8,7 @@ Dockerの概要は『ゼロからはじめるデータサイエンス入門』�
 
 ### コンテナの削除
 
-`docker ps -a`で出てくるコンテナを次のように削除する．（`-f`は動作中のコンテナも強制的に削除するためのオプション．CONTAINER IDは，他と識別できる文字数だけ入力すればよい．）
+`docker ps -a`で出てくるコンテナを次のように削除する．（`-f`は動作中のコンテナも強制的に削除するためのオプション．`コンテナ名`や`CONTAINER ID`の部分は，実際のもので置き換える．CONTAINER IDは，他と識別できる文字数だけ入力すればよい．）
 
 ```bash
 docker rm -f コンテナ名
@@ -20,7 +20,7 @@ docker rm -f CONTAINER ID
 
 ### イメージの削除
 
-`docker images`で出てくるイメージを次のように削除する．（`-f`はそのイメージから作られたコンテナがっても強制的に削除するためのオプション．IMAGE IDは，他と識別できる文字数だけ入力すればよい．）
+`docker images`で出てくるイメージを次のように削除する．（`-f`はそのイメージから作られたコンテナがっても強制的に削除するためのオプション．`REPOSITORY`や`IMAGE ID`は，実際のもので置き換える．IMAGE IDは，他と識別できる文字数だけ入力すればよい．）
 
 ```bash
 docker rmi -f REPOSITORY
@@ -86,7 +86,7 @@ http://localhost:80/info.php にアクセスして，画面が出てくれば成
 
 複数のコンテナをまとめて管理する，docker composeを使う．
 
-その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，すべての作業はこのdocker-compose.ymlがあるフォルダで行う．**
+その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，このdocker-compose.ymlがある場所を，コンソールのカレントディレクトリとして作業する．**
 
 ```bash
 # ターミナルで実行する．
