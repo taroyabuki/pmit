@@ -51,14 +51,12 @@ https://github.com/yabukilab/yabuki-x/|https://yabuki-x.pm-chiba.tech
 
 ### 構文チェックの結果
 
-<iframe src="https://admin.pm-chiba.tech/report.php" style="width:100%; height:550px;"></iframe>
+https://admin.pm-chiba.tech/report.php
 
 HTMLやCSSに構文エラーがなければ![passing（緑色）](img/passing.svg)になる（プッシュしてしばらくすると更新される）．
 構文エラーがあると![failing（赤）](img/failing.svg)になる．
 エラーは![failing（赤）](img/failing.svg)をクリックして確認できる．
 しかし，[「正しいHTML文書」](validation.md)の方法で，VSCode上でチェックすることを勧める．
-
-画像がキャッシュされて変更されない疑いがあるときは，ウェブブラウザのシークレットウィンドウ（プライベートウィンドウ）で https://admin.pm-chiba.tech/report.php を開いてみる．
 
 ## 参考書
 
