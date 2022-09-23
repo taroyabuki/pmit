@@ -34,7 +34,7 @@
 
 構文のチェックは機械的にできる．
 
-* [VSCode + W3C Web Validator](vscode.md) **（推奨）**
+* **（推奨） [VSCode + W3C Web Validator](vscode.md) （[解説動画](https://youtu.be/fdcs3LfjX2M)）**
 * W3C Markup Validation Service
   - [URLでチェック](https://validator.w3.org/#validate_by_uri)
   - [ファイルアップロードでチェック](https://validator.w3.org/#validate_by_upload)
