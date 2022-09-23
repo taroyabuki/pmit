@@ -2,12 +2,11 @@
 
 ## インストール
 
-[VSCode](https://code.visualstudio.com/)をダウンロードしてインストールする．
-PowerShellで`winget install Microsoft.VisualStudioCode`としてもよい．
+VSCodeをインストールする．[ウェブサイト](https://code.visualstudio.com)からダウンロードしてもよいし，PowerShellで`winget install Microsoft.VisualStudioCode`としてもよい．
 
 ## VSCodeの拡張機能
 
-VSCodeを起動し、`Ctrl+Shift+x`で拡張機能の検索タブを開き，キーワードを入れると該当する拡張機能が出てくる．名前を確認して、「Install」をクリックしてインストールする．
+VSCodeを起動し、`Ctrl+Shift+x`で拡張機能の検索タブを開き，キーワードを入れると該当する拡張機能が出てくる．名前を確認して、「Install」（または「インストール」）をクリックしてインストールする．
 
 名前|キーワード|メモ（使用する講義等）
 ---|---|---

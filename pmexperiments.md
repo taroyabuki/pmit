@@ -2,13 +2,15 @@
 
 ## 準備
 
-1. チーム分けが終わったら，そのチームためのGitHubリポジトリ（ファイル置き場）への招待メールが届く．
-1. メールに対応すると，リポジトリに書き込めるようになる．**このメールの有効期限は短いことに注意．**
-1. [この後の作業（解説動画）](https://youtu.be/1WSovwUgpFw)
+1. GitHubのアカウントを持っていない場合：
+    - https://github.com （**GitHub Educationではない**）の「Sign up」でアカウントを作る．
+    - 登録には大学のメアド（s.chibakoudai.jp）を使う．
+    - ☑メアドの確認のためのメールが届くから，それに対応する．
+    - （オプション）https://github.com/settings/emails で別のメアドを登録しておくと，卒業後も使い続けられる．
+1. チーム分けが終わったら，そのチームのGitHubリポジトリ（ファイル置き場）への招待メールが届く．
+1. ☑メールに対応すると，リポジトリに書き込めるようになる．**このメールの有効期限は短い．** 有効期限が過ぎてしまった場合は矢吹に連絡する．
 
-注意：GitHubのページでは，機械翻訳はオフにしておいた方がよさそう．
-
-補足：動画に出てくるファイル「.travis.yml」のことは気にしない．かつてTracisCIというサービスで構文チェックをしていたなごりである．現在は，別の方法で構文チェックをしている．
+**注意：GitHubのページを丸ごと翻訳してはいけない．専門用語が翻訳されると，意味不明になる．（例：master→主人，raw→生）**
 
 ## ウェブページの作成
 
@@ -18,60 +20,45 @@
 
 ## ウェブページの公開
 
-前提：[VSCode](vscode.md)と[Git](git.md)がインストール済み．（ただし，VSCodeでうまく行かない人は，[GitHub Desktop](https://desktop.github.com/)を試してみるとよい．操作方法は異なるが，必要なのが，①ステージ，②コミット，③プッシュであることに変わりはない．）
-
-各チームのGitHubリポジトリにファイルを登録する．Visual Studio Codeで実行する方法については，[VSCodeでGitHubを使う](git.md)を参照．
-
 概要：公開するファイルを，フォルダ**htdocs**の中に保存する．トップページは**index.html**である．
 
-1. 作業用のフォルダを作る．（例：c:/work）
-1. エクスプローラでそのフォルダを開き，アドレス欄に「`powershell`」と入力する．（コマンド入力用のウィンドウが現れる．PowerShellを起動して，「`c:`」エンター，「`cd /work`」エンターでもよい．）
-1. 「`git clone https://github.com/yabukilab/{チーム名}.git`」を実行する．`{チーム名}`の部分は，矢吹研Aなら`yabuki-a`．（フォルダができる．例：yabuki-a．このフォルダを右クリック→「Codeで開く」）
-1. 上でできたフォルダの中に，htdocsというフォルダがある．公開するファイルはすべてこの中に格納する．（このフォルダの中に格納したファイルしか公開できない．）
-1. トップページはindex.htmlである．これは特別なファイルで，ファイル名を指定せずにアクセスできる．（例：http://yabukia.pm-chiba.tech/ にアクセスすると，リポジトリhttps://github.com/yabukilab/yabuki-a のhtdocs/index.htmlを閲覧することになる．）
-1. 変更したファイルをステージ，コミット，プッシュする．
-1. ウェブサイトを確認する．
+できあがりの例：
 
-## 重要なURL
+- リポジトリ：https://github.com/yabukilab/yabuki-x
+- ウェブサイト：https://yabuki-x.pm-chiba.tech
 
-### 各チームのリポジトリ
+やり方：[VSCodeでGitHubを使う](git.md)
 
-- https://github.com/yabukilab/shimoda-a
-- https://github.com/yabukilab/shimoda-b
-- https://github.com/yabukilab/shimoda-c
-- https://github.com/yabukilab/ogasawara-a
-- https://github.com/yabukilab/ogasawara-b
-- https://github.com/yabukilab/ogasawara-c
-- https://github.com/yabukilab/yabuki-a
-- https://github.com/yabukilab/yabuki-b
-- https://github.com/yabukilab/yabuki-c
-- https://github.com/yabukilab/yabuki-x
-- https://github.com/yabukilab/takuma-a
-- https://github.com/yabukilab/takuma-b
-- https://github.com/yabukilab/takuma-c
+VSCodeでうまく行かない人は，[GitHub Desktop](https://desktop.github.com)を試してみるとよい．操作方法は異なるが，必要なのが，①ステージ，②コミット，③プッシュであることに変わりはない．
 
-### 各チームのウェブサイト
+### 各チームのURL
+
+リポジトリ|ウェブサイト
+--|--
+https://github.com/yabukilab/ogasawara-a/|https://shimoda-a.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-b/|https://shimoda-b.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-c/|https://shimoda-c.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-d/|https://shimoda-d.pm-chiba.tech
+https://github.com/yabukilab/shimoda-a/|https://ogasawara-a.pm-chiba.tech
+https://github.com/yabukilab/shimoda-b/|https://ogasawara-b.pm-chiba.tech
+https://github.com/yabukilab/shimoda-c/|https://ogasawara-c.pm-chiba.tech
+https://github.com/yabukilab/shimoda-d/|https://ogasawara-d.pm-chiba.tech
+https://github.com/yabukilab/yabuki-a/|https://yabuki-a.pm-chiba.tech
+https://github.com/yabukilab/yabuki-b/|https://yabuki-b.pm-chiba.tech
+https://github.com/yabukilab/yabuki-c/|https://yabuki-c.pm-chiba.tech
+https://github.com/yabukilab/yabuki-d/|https://yabuki-d.pm-chiba.tech
+https://github.com/yabukilab/yabuki-x/|https://yabuki-x.pm-chiba.tech
+
+### 構文チェックの結果
+
+<iframe src="https://admin.pm-chiba.tech/report.php" style="width:100%; height:550px;"></iframe>
 
 HTMLやCSSに構文エラーがなければ![passing（緑色）](img/passing.svg)になる（プッシュしてしばらくすると更新される）．
 構文エラーがあると![failing（赤）](img/failing.svg)になる．
 エラーは![failing（赤）](img/failing.svg)をクリックして確認できる．
 しかし，[「正しいHTML文書」](validation.md)の方法で，VSCode上でチェックすることを勧める．
 
-チーム|URL|エラーチェックの結果（クリックでエラー表示）
--|-|-
-下田A|https://shimoda-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-a.svg)](https://admin.pm-chiba.tech/log/shimoda-a-validator.log)
-下田B|https://shimoda-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-b.svg)](https://admin.pm-chiba.tech/log/shimoda-b-validator.log)
-下田C|https://shimoda-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/shimoda-c.svg)](https://admin.pm-chiba.tech/log/shimoda-c-validator.log)
-小笠原A|https://ogasawara-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-a.svg)](https://admin.pm-chiba.tech/log/ogasawara-a-validator.log)
-小笠原B|https://ogasawara-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-b.svg)](https://admin.pm-chiba.tech/log/ogasawara-b-validator.log)
-小笠原C|https://ogasawara-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/ogasawara-c.svg)](https://admin.pm-chiba.tech/log/ogasawara-c-validator.log)
-矢吹A|https://yabuki-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-a.svg)](https://admin.pm-chiba.tech/log/yabuki-a-validator.log)
-矢吹B|https://yabuki-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-b.svg)](https://admin.pm-chiba.tech/log/yabuki-b-validator.log)
-矢吹C|https://yabuki-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-c.svg)](https://admin.pm-chiba.tech/log/yabuki-c-validator.log)
-矢吹X|https://yabuki-x.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/yabuki-x.svg)](https://admin.pm-chiba.tech/log/yabuki-x-validator.log)
-田隈A|https://takuma-a.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-a.svg)](https://admin.pm-chiba.tech/log/takuma-a-validator.log)
-田隈B|https://takuma-b.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-b.svg)](https://admin.pm-chiba.tech/log/takuma-b-validator.log)
-田隈C|https://takuma-c.pm-chiba.tech/|[![Build Status](https://admin.pm-chiba.tech/log/takuma-c.svg)](https://admin.pm-chiba.tech/log/takuma-c-validator.log)
+画像がキャッシュされて変更されない疑いがあるときは，ウェブブラウザのシークレットウィンドウ（プライベートウィンドウ）で https://admin.pm-chiba.tech/report.php を開いてみる．
 
 ## 参考書
 
