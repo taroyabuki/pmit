@@ -22,7 +22,7 @@ Japanese Language Pack for Visual Studio Code|`japanese`|日本語UI
 Ctrl+,（あるいはファイル→ユーザ設定→設定）で設定タブを開いて設定する．
 
 - 保存時にHTMLの構文を検証する：`webvalidator.validateOnSave`を検索し，有効にする．
-- （オプション）HTMLファイルの保存時にプレビューを更新する：`livePreview.autoRefreshPreview`を検索し，設定を`On Changes to Saved Files`にする．
+- （オプション）HTMLファイルの保存時にプレビューを自動更新する：`livePreview.autoRefreshPreview`を検索し，設定を`On Changes to Saved Files`にする．（機能しない場合は元に戻す．）
 - （オプション）空白文字を見やすくする：`whitespace`を検索し，Editor: Render Whitespaceを「all」にする．
 
 ## 補足：ブラウザ上のVSCode
