@@ -1,7 +1,5 @@
 # VSCode（Visual Studio Code）の導入
 
-VSCodeとは関係ないが，ファイルの拡張子が表示されるようにしておくこと．（エクスプローラの表示タブ→「ファイル名拡張子」を有効にする．）
-
 ## インストール
 
 VSCodeをインストールする．[ウェブサイト](https://code.visualstudio.com)からダウンロードしてもよいし，PowerShellで`winget install Microsoft.VisualStudioCode`としてもよい．
