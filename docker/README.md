@@ -7,7 +7,7 @@ Dockerの概要は『ゼロからはじめるデータサイエンス入門』�
 参考：[WSL のインストール](https://docs.microsoft.com/ja-jp/windows/wsl/install)
 
 1. Windows updateでWindowsを最新状態にする．
-1. WSL2のインストール
+1. WSL2のインストールと更新
 
 スタートメニューを右クリック→Windows PowerShell（管理者）で次を実行する．（初回起動時にユーザ名とパスワードを設定する．パスワードは画面に表示されない．）
 
@@ -20,6 +20,15 @@ wsl --install
 ```bash
 wsl --install -d Ubuntu
 ```
+
+WSLを更新する．
+
+```bash
+wsl --update
+```
+
+`wsl -l -v`で，Ubuntuが既定（`*`）で，VERSIONが2であることを確認する．
+Ubuntuが既定でなければ`wsl -s Ubuntu`，VERSIONが2でなければ`wsl --set-version Ubuntu 2`とする．
 
 3. Dockerのインストール
 
