@@ -10,7 +10,7 @@ VSCodeを起動し、`Ctrl+Shift+x`で拡張機能の検索タブを開き，キ
 
 名前|キーワード|メモ
 ---|---|---
-hexdump for VSCode|`hexdump`|ファイルのダンプ（バイト列の表示）
+Hex Editor|`hex`|ファイルのダンプ（バイト列の表示）
 Live Preview|`live preview`|HTMLのプレビュー（右上のプレビューボタン）．HTMLファイルをブラウザで開くより簡単．
 W3C Web Validator|`w3c`|HTMLの構文の検証
 Japanese Language Pack for Visual Studio Code|`japanese`|日本語UI
