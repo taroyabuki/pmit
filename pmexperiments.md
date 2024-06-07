@@ -43,19 +43,23 @@ VSCodeでうまく行かない人は，[GitHub Desktop](https://desktop.github.c
 
 リポジトリ|ウェブサイト
 --|--
-https://github.com/yabukilab/ogasawara-a/|https://ogasawara-a.pm-chiba.tech
-https://github.com/yabukilab/ogasawara-b/|https://ogasawara-b.pm-chiba.tech
-https://github.com/yabukilab/ogasawara-c/|https://ogasawara-c.pm-chiba.tech
-https://github.com/yabukilab/ogasawara-d/|https://ogasawara-d.pm-chiba.tech
-https://github.com/yabukilab/shimoda-a/|https://shimoda-a.pm-chiba.tech
-https://github.com/yabukilab/shimoda-b/|https://shimoda-b.pm-chiba.tech
-https://github.com/yabukilab/shimoda-c/|https://shimoda-c.pm-chiba.tech
-https://github.com/yabukilab/shimoda-d/|https://shimoda-d.pm-chiba.tech
-https://github.com/yabukilab/yabuki-a/|https://yabuki-a.pm-chiba.tech
-https://github.com/yabukilab/yabuki-b/|https://yabuki-b.pm-chiba.tech
-https://github.com/yabukilab/yabuki-c/|https://yabuki-c.pm-chiba.tech
-https://github.com/yabukilab/yabuki-d/|https://yabuki-d.pm-chiba.tech
-https://github.com/yabukilab/yabuki-x/|https://yabuki-x.pm-chiba.tech
+https://github.com/yabukilab/matsuda-a|https://matsuda-a.pm-chiba.tech
+https://github.com/yabukilab/matsuda-b|https://matsuda-b.pm-chiba.tech
+https://github.com/yabukilab/matsuda-c|https://matsuda-c.pm-chiba.tech
+https://github.com/yabukilab/matsuda-d|https://matsuda-d.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-a|https://ogasawara-a.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-b|https://ogasawara-b.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-c|https://ogasawara-c.pm-chiba.tech
+https://github.com/yabukilab/ogasawara-d|https://ogasawara-d.pm-chiba.tech
+https://github.com/yabukilab/shimoda-a|https://shimoda-a.pm-chiba.tech
+https://github.com/yabukilab/shimoda-b|https://shimoda-b.pm-chiba.tech
+https://github.com/yabukilab/shimoda-c|https://shimoda-c.pm-chiba.tech
+https://github.com/yabukilab/shimoda-d|https://shimoda-d.pm-chiba.tech
+https://github.com/yabukilab/yabuki-a|https://yabuki-a.pm-chiba.tech
+https://github.com/yabukilab/yabuki-b|https://yabuki-b.pm-chiba.tech
+https://github.com/yabukilab/yabuki-c|https://yabuki-c.pm-chiba.tech
+https://github.com/yabukilab/yabuki-d|https://yabuki-d.pm-chiba.tech
+https://github.com/yabukilab/yabuki-x|https://yabuki-x.pm-chiba.tech
 
 ### 構文チェックの結果
 
