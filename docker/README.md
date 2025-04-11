@@ -40,6 +40,10 @@ winget install Docker.DockerDesktop
 
 コンピュータを一度再起動して，Docker Desktopを起動してみる．エラーメッセージが表示されたら，その指示に従う．
 
+4. Docker Hubのアカウントを作成する。
+    1. https://hub.docker.com/ でアカウントを作成する。
+    2. Docker Desktopを起動して，右上のアイコンをクリックして，Docker Hubにログインする。
+
 ## 動作確認
 
 1. Dockerの動作確認
