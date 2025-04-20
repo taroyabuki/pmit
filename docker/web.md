@@ -1,203 +1,258 @@
-# ウェブアプリ開発環境（Docker）
+# ウェブアプリの開発環境（Docker）
 
-Dockerの概要は『ゼロからはじめるデータサイエンス入門』（講談社, 2021）などを参照．
+ウェブサーバApache，データベース管理システムMySQL（MariaDB），管理インタフェースphpMyAdminを，一つのコンテナで実現する方法を紹介する。♠別々のコンテナで実現する方が実用的かもしれない（[compose](compose)を参照）。
 
-## 後片付け
+メリット
 
-不要なコンテナ，イメージ，ボリュームを削除し忘れてディスクを圧迫しないように，まず，これらの削除方法を確認する．
+- 全員の開発環境が同じになる。
+- よくわからなくなったときに，全部消してやり直すのが簡単（コンテナを削除するだけ）。
 
-### コンテナの削除
+デメリット
 
-`docker ps -a`で出てくるコンテナを次のように削除する．（`-f`は動作中のコンテナも強制的に削除するためのオプション．`コンテナ名`や`CONTAINER ID`の部分は，実際のもので置き換える．CONTAINER IDは，他と識別できる文字数だけ入力すればよい．）
+- 慣れないうちは，「コンテナの中での作業」というのがわかりにくい。
 
-```bash
-docker rm -f コンテナ名
-# あるいは
-docker rm -f CONTAINER ID
-```
+## 前提
 
-すべてのコンテナを削除するなら`docker rm -f $(docker ps -aq)`
+- Dockerの動作確認はできている（[/docker](/docker)を参照）。
+- VS Codeに次の拡張機能が入っている。
+    - Dev Containers
+    - Japanese Language Pack for Visual Studio Code（必須ではないが，ここでの説明はこれを前提にする。）
+- **作業フォルダ**を適当に決める。空のフォルダがよい（例：c:/workを新規作成）。
 
-### イメージの削除
+エクスプローラで作業フォルダを開いた状態で，アドレスバーに`bash`と入力してターミナルを起動して作業する。
 
-`docker images`で出てくるイメージを次のように削除する．（`-f`はそのイメージから作られたコンテナがっても強制的に削除するためのオプション．`REPOSITORY`や`IMAGE ID`は，実際のもので置き換える．IMAGE IDは，他と識別できる文字数だけ入力すればよい．）
-
-```bash
-docker rmi -f REPOSITORY
-# あるいは
-docker rmi -f IMAGE ID
-```
-
-稼働中のコンテナに関わるもの以外の，すべてのイメージとコンテナを削除するなら`docker system prune`
-
-### ボリュームの削除
-
-`docker volume ls`で出てくるボリュームを次のように削除する．
+## コンテナの構築
 
 ```bash
-docker volume rm VOLUME NAME
+docker run --rm -d -p 80:80 -v "$(pwd):/var/www" --name lamp taroyabuki/pm-lamp
 ```
 
-動作中のコンテナに関わらないボリュームを全て削除するなら`docker volume prune`
+> [!CAUTION]
+> 説明しやすくするために，`lamp`という名前を付けている。同じ名前のコンテナをもう一つ作ろうとするとエラーになる。その場合は，後述の方法で一度コンテナを削除する。
 
-## コンテナを使う練習
+動作確認：http://localhost/phpmyadmin/ にアクセスして，ユーザ名`testuser`，パスワード`pass`でログインできることを確認する。
 
-PHPのコンテナを用意し，HTMLファイルを配信する．
+> [!TIP]
+> やり直したいときは，次のようにしてコンテナを削除する。
 
-1. 適当な場所に「web」という名前のフォルダを作り，それをExplorerで開く．**以下，すべての作業はこのフォルダで行う．**
-1. アドレス欄に`bash`と入力し，Enterを押す．（bashが起動し，フォルダwebがカレントディレクトリになる．以下，このウィンドウを**ターミナル**と呼ぶ．コマンドは，このターミナルで入力し，実行する．）
-1. フォルダhtdocsとファイルhtdocs/test.txtを作る．
+```
+docker rm -f lamp
+```
+
+## コンテナ内での作業
+
+1. VS Codeの左下のアイコンをクリック→「実行中のコンテナーにアタッチ...」でコンテナlampに接続する。♠慣れているなら`docker exec -it bash lamp`でもよい。
+1. ファイル→「フォルダーを開く」で`/var/www`を開く。
+1. Ctrl+Shift+@でターミナルを開く。
+
+> [!TIP]
+> このフォルダは，作業フォルダ（`docker run`を実行したフォルダ）と同じにしてある。`-v "$(pwd):/var/www"`がそssのためのオプションである。
+
+## リポジトリのクローン
+
+ターミナルで次を実行すると，/var/wwwにリポジトリがクローンされる（**`yabuki-x`の部分は自分のチームの名前で置き換える**）。
 
 ```bash
-# ターミナルで実行する．
-mkdir htdocs
-echo "<?php phpinfo();" > htdocs/info.php
+cd /var/www
+git clone https://github.com/yabukilab/yabuki-x.git
 ```
 
-次のような構成になる．
-
-```
-web                    # すべての作業はこのフォルダで行う．
-├── docker-compose.yml # 後でダウンロードするファイル
-└── htdocs             # ここにあるファイルがウェブサーバで公開される．
-    └── info.php       # 3で作ったファイル．
-```
-
-4. ウェブサーバを起動し，info.phpにアクセスする（終了はCtrl-c, Ctrl-c）．
+ドキュメントルート（公開するフォルダの基点）を設定する。
 
 ```bash
-# ターミナルで実行する．
-docker run --rm -it -p 80:80 -v $(pwd)/htdocs:/var/www/html taroyabuki/php-pdo:7.2
+rm -rf html
+ln -s yabuki-x/htdocs html
 ```
 
-http://localhost:80/info.php にアクセスして，画面が出てくれば成功．（URLの「:80」はHTTPのデフォルトだから省略可）
+> [!TIP]
+> 次のフォルダは同じものである（`yabuki-x`の部分は自分のチームの名前で置き換える）。
 
-ここで作ったコンテナは次のようなものである．
+- ホストの，作業フォルダ/html
+- ホストの，作業フォルダ/yabuki-x/htdocs
+- コンテナの，/var/www/html
+- コンテナの，/var/www/yabuki-x/htdocs
 
-[![](php.svg)](php.md)
+> [!TIP]
+> ここでの作業の結果はホスト側に残るため，コンテナを再構築した場合に繰り返す必要はない。
 
-補足：
+## ウェブページの作成
 
-1. php-pdo:7.2というイメージをもとにコンテナを作っている．ちなみに，このイメージは，PHP 7.2にMySQLに接続するためのライブラリ（PDO）を追加したものである（[Dockerfile](php-pdo/Dockerfile)）．
-2. コンテナのウェブサーバが公開するファイルは/var/www/htmlに置くことになっている．このフォルダはホストのweb/htdocsと同じものである．だから，web/htdocsに置いたファイルがウェブサーバ経由で閲覧できることになる．
-3. コンテナのウェブサーバには，ホストのポート80経由でアクセスする．
+a.htmlというファイルを作って閲覧してみよう。
 
-## 開発の本番
+VS Codeで/var/www/html/a.htmlを作る。内容は適当でよい。♠コンソールで`echo hello > /var/www/html/a.html`などとしてもよい。
 
-複数のコンテナをまとめて管理する，docker composeを使う．
+http://localhost/a.html でページが表示されることを各委任する。
 
-その設定ファイル[docker-compose.yml](docker-compose.yml)をダウンロードしておく（1回だけ実行すればよい）．**以下，このdocker-compose.ymlがある場所を，コンソールのカレントディレクトリとして作業する．**ファイルを作る作業はホスト側でやればいいが，間違わないために，エクスプローラーは拡張子を表示するように設定しておいた方がいい．
+## バージョン管理
+
+### 準備
+
+VS Codeにリポジトリを認識させる。
+
+1. VS Codeで，フォルダ/var/www/yabuki-xを開く（`yabuki-x`の部分は自分のチームの名前で置き換える）。
+1. 左側の枝分かれの絵のアイコンをクリック，「Manage unsafe repository」をクリックして，/var/www/yabuki-xを指定する。
+
+### a.htmlの管理
+
+上で作成したa.htmlをリポジトリに追加する。
+
+1. （プル）
+1. ステージ
+1. コミット
+1. プッシュ
+
+（オプション）GitHubに変更がある場合は，先に**プル**しておく（`yabuki-x`の部分は自分のチームの名前で置き換える）。
 
 ```bash
-# ターミナルで実行する．
-wget https://raw.githubusercontent.com/taroyabuki/pmit/master/docker/docker-compose.yml
+cd /var/www/yabuki-x
+git pull
 ```
 
-全体の構成は図のとおり（詳細は[docker-compose.yml](docker-compose.yml)を参照）．
-
-[![](image.svg)](image.md)
-
-開発環境の起動と停止は次のとおり．
+a.htmlをバージョン管理の対象にする（**ステージ**）。
 
 ```bash
-# ターミナルで実行する．
-
-#起動
-docker compose up -d
-
-#停止
-docker compose down
+cd /var/www/html
+git add a.html
 ```
 
-（稼働中の）コンテナが残っている状態で新たに開発環境を起動しようとすると，次のようなエラーになる（ポートの利用が重複しているということ）．
-
-```
-（省略）Bind for 0.0.0.0:8080 failed: port is already allocated
-```
-
-こういう場合は開発環境を停止させればいいのだが，それがうまく行かない場合は，`docker ps`で残っているコンテナを確認して，`docker rm`で削除する．削除の際は，コンテナを識別するのに十分なだけCONTAINER IDを入力する．
+変更を確定する**コミット**。コミットメッセージは丁寧に書いておくとよい。
 
 ```bash
-# ターミナルで実行する．
-docker ps #以下は結果の例
-CONTAINER ID   IMAGE                    COMMAND                  CREATED        STATUS        PORTS                  NAMES
-8846c6f8a068   taroyabuki/php-pdo:7.2   "docker-php-entrypoi…"   12 hours ago   Up 12 hours   0.0.0.0:80->80/tcp     web-php-1
-0865bf577c46   mysql:5.7                "docker-entrypoint.s…"   12 hours ago   Up 12 hours   3306/tcp, 33060/tcp    web-mysql-1
-2de8fc0818a3   phpmyadmin/phpmyadmin    "/docker-entrypoint.…"   12 hours ago   Up 12 hours   0.0.0.0:8080->80/tcp   web-phpmyadmin-1
+git commit -m "test page"
 ```
 
-上のような結果を見て，削除対象を確認し，削除する．上の，「2de8fc0818a3   phpmyadmin/phpmyadmin・・・」を削除するなら次のとおり．
+ここまでがローカルでのバージョン管理。最後に，GtHubに**プッシュ**するのだが，認証の手間を少し減らすために，VS CodeのGUIの「変更の同期」を使う。
+
+> [!TIPS]
+> プッシュだけでなく，プル，ステージ，コミットもVS Code上で行える。
+
+> [!TIPS]
+> よくわからなくなったら，次のようにローカルのリポジトリを削除して，上の「クローン」からやり直す。参照：https://naglly.com/archives/2015/10/xkcd-git.php
 
 ```bash
-# ターミナルで実行する．
-docker rm -f 884 086 2de
+rm -rf /var/www/yabuki-x
 ```
 
-### 開発の概要
+## 公開
 
-- .php, .html, .cssはホストのVS codeで編集する．（VS Codeの拡張機能「Remote Development」を使って，コンテナに接続して編集することもできるが，詳細は割愛）
-- ウェブアプリの動作確認は，http://localhost で行う．例えば，練習で作ったinfo.phpには，http://localhost/info.php で閲覧できる．
-- MySQLの操作方法（2種類）：
-    - コンソールを使う．（`docker compose exec mysql mysql -uroot -ppass mydb`）**←ここではこの方法を使う．**
-    - [phpMyAdmin](http://localhost:8080)を使う．（ユーザ名は`root`，パスワードは`pass`）
-- データベースをダンプする方法（mydb.sqlができる）：
-    - テーブルを作り直さない場合：`docker compose exec mysql mysqldump -uroot -ppass mydb > mydb.sql`
-    - テーブルを作り直す場合：`docker compose exec  mysql mysqldump -uroot -ppass --add-drop-table mydb > mydb.sql`
+GitHubに登録すれば，あとは自動で公開されるはず。
 
-### 練習
+結果の確認：https://yabuki-x.pm-chiba.tech/a.html でページが表示されることを確認する（`yabuki-x`の部分は自分のチームの名前で置き換える）。
 
-後は[PM演習](https://github.com/taroyabuki/pmpractice2)の順番で勉強していけばいいのだが，最初の方だけやってみる．
+ちなみに，ローカルでの確認はhttp://localhost/a.html だった。
 
-ヒント：作業が終わると，フォルダwebの中身は次のようになっている．
+## データベースを使うウェブアプリ
 
-```
-web
-├── docker-compose.yml
-└── htdocs
-    ├── db.php
-    ├── hello-db.php
-    ├── info.php
-    └── show-all2.php
-```
+https://github.com/taroyabuki/pmpractice2 の「詳しい説明」のところを順番にやっていけばよいのだが，動作確認のために，[全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)を再現する。
 
-#### PHPとMySQL
-
-[PHPとMySQL](https://github.com/taroyabuki/pmpractice2/blob/master/docs/phpmysql.md)の作業をやってみるのだが，データベースmydbはすでにできている．あとは，テーブルtable1を作ればよい．
-
-そのためにMySQLに接続する（[phpMyAdmin](http://localhost:8080)を使ってもよい）．
-
-1. docker-compose.ymlのあるディレクトリで，次を実行する．（エクスプローラーでフォルダを開き，アドレス欄に`bash`を入力，エンター）
-
-```bash
-# ターミナルで実行する．
-docker compose exec mysql mysql -uroot -ppass mydb
-```
-
-2. 「`mysql>`」というプロンプトが出たら，SQLを貼り付けて実行する（詳細は[データベースの操作](https://github.com/taroyabuki/pmpractice2/blob/master/docs/sql.md)を参照．ただし，コンソールの起動方法やphpMyAdminのURLが，ここでの想定とは違っている．）．
+1. ターミナルで`mysql`として，MySQL（MariaDB）に接続する（終了はCtrl-d）。
+2. データベースを作る。
 
 ```sql
+create database mydb charset=utf8mb4;
+```
+
+3. テーブルを作る。
+
+```sql
+use mydb;
+
 create table table1 (
   id int primary key auto_increment, # ここはいつも同じ
   varcharA varchar(40) not null,
   intA int not null,
   intB int not null # 最後にはカンマがないことに注意．
 );
+```
 
+4. データを入力する。
+
+```sql
 insert into table1 (id, varcharA, intA, intB) values
 (1, 'A', 1280, 1),
 (2, 'B', 2980, 0),
 (3, 'C', 198, 121);
-
-exit
 ```
 
-3. web/htdocsに，ファイル[db.php](https://github.com/taroyabuki/pmpractice2/blob/master/db.php)を作る（エクスプローラーで新規作成→テキスト文書）．http://localhost/db.php にアクセスして，エラーが表示されないことを確認する．
-4. web/htdocsに，ファイル[hello-db.php](https://github.com/taroyabuki/pmpractice2/blob/master/docs/hello-db.php)を作る（エクスプローラーで新規作成→テキスト文書）．http://localhost/hello-db.php にアクセスして，エラーが表示されないことを確認する．
+5. /var/www/html/db.php を作る（[内容](https://github.com/taroyabuki/pmpractice2/blob/master/db.php)）。
+6. /var/www/html/show-all.php を作る（[内容](https://github.com/taroyabuki/pmpractice2/blob/master/patterns/show-all/show-all1.php)）
+7. 動作確認：http://localhost/show-all.php
 
-#### 全データ表示（実装）
+## 練習
 
-[全データ表示（実装）](https://github.com/taroyabuki/pmpractice2/tree/master/patterns/show-all)の一部を試す．
+### 練習1
 
-5. web/htdocsに，ファイル[show-all2.php](https://github.com/taroyabuki/pmpractice2/blob/master/patterns/show-all/show-all2.php)を作る．http://localhost/show-all2.php でデータが表示されることを確かめる．
+（コンテナの中ではなく）ホストで`docker rm -f lamp`としてコンテナを削除して，最初からやり直してみる。
 
-後は[PM演習](https://github.com/taroyabuki/pmpractice2)の順番で勉強していけばいい．
+### 練習2
+
+コンテナを削除して，http://localhost/show-all.php を再現する。ただし今回は，コードはAIに書かせる。プロンプトを書く練習である。
+
+## 次に学ぶこと
+
+https://github.com/taroyabuki/pmpractice2 の「詳しい説明」のところを順番にやってみよう。
+
+## ♠参考：イメージの作り方（環境構築法）
+
+> [!NOTE]
+> 以下は参考資料である。興味が無い者は読まなくてよい。
+
+次のような手順で必要なソフトウェアをインストールする。
+
+```bashss
+# コンテナ構築
+docker run --rm -d -p 80:80 ubuntu:24.04
+``` 
+
+後はコンテナ内での作業（プロンプトは`#`）。
+
+```bash
+# ウェブサーバとデータベース管理システムのインストール
+apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git apache2 libapache2-mod-php php-mbstring mariadb-server mariadb-client debconf-utils
+
+# 警告回避
+echo 'ServerName localhost' >> /etc/apache2/apache2.conf
+
+# ウェブサーバ起動
+apachectl start
+```
+
+動作確認 http://localhost
+
+```bash
+# データベースサーバ起動
+service mariadb start
+
+# データベースのユーザ作成
+mysql << EOF
+CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'pass';
+GRANT ALL PRIVILEGES ON *.* TO 'testuser'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+
+# データベース管理アプリphpMyAdminのインストール
+# apt-get install -y --no-install-recommends phpmyadmin
+# 質問に，次のように答えるのを自動化する。
+#Configure database for phpmyadmin with dbconfig-common? [yes/no] yes
+#
+#MySQL application password for phpmyadmin: 入力せずにEnter
+#
+#Web server to reconfigure automatically: 1
+
+debconf-set-selections <<EOF
+phpmyadmin phpmyadmin/dbconfig-install boolean true
+phpmyadmin phpmyadmin/app-password-confirm password 
+phpmyadmin phpmyadmin/mysql/admin-pass password 
+phpmyadmin phpmyadmin/mysql/app-pass password 
+phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2
+EOF
+
+apt-get install -y --no-install-recommends phpmyadmin
+
+# ウェブサーバ再起動
+apachectl restart
+```
+
+動作確認（ユーザ名testuser，パスワードpass） http://localhost/phpmyadmin
+
+以上の全体を[Dockerfile](Dockerfile)にまとめて，そのファイルがあるフォルダで`docker build -t pm-lamp .`として，イメージを構築した。
