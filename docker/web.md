@@ -17,7 +17,7 @@
 - VS Codeに次の拡張機能が入っている。
     - Dev Containers
     - Japanese Language Pack for Visual Studio Code（必須ではないが，ここでの説明はこれを前提にする。）
-- **作業フォルダ**を適当に決める。空のフォルダがよい（例：c:/workを新規作成）。
+- **作業フォルダ**を適当に決める。**空のフォルダがよい**（例：c:/workを新規作成）。
 
 エクスプローラで作業フォルダを開いた状態で，アドレスバーに`bash`と入力してターミナルを起動して作業する。
 
@@ -41,7 +41,7 @@ docker rm -f lamp
 
 ## コンテナ内での作業
 
-1. VS Codeの左下のアイコンをクリック→「実行中のコンテナーにアタッチ...」でコンテナlampに接続する。♠慣れているなら`docker exec -it bash lamp`でもよい。
+1. VS Codeの左下のアイコンをクリック→「実行中のコンテナーにアタッチ...」でコンテナlampに接続する。♠慣れているなら`docker exec -it lamp bash`でもよい。
 1. ファイル→「フォルダーを開く」で`/var/www`を開く。
 1. Ctrl+Shift+@でターミナルを開く。
 
@@ -57,7 +57,7 @@ cd /var/www
 git clone https://github.com/yabukilab/yabuki-x.git
 ```
 
-ドキュメントルート（公開するフォルダの基点）を設定する。
+ドキュメントルート（公開するフォルダの基点）を設定する（`rm`はファイルの削除，`ln`はリンクの作成）。
 
 ```bash
 rm -rf html
